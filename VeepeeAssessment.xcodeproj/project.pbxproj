@@ -1,0 +1,705 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */; };
+		FE75B5B329C4663E004F8046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B229C4663E004F8046 /* ContentView.swift */; };
+		FE75B5B529C46640004F8046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75B5B429C46640004F8046 /* Assets.xcassets */; };
+		FE75B5B829C46640004F8046 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75B5B729C46640004F8046 /* Preview Assets.xcassets */; };
+		FE75B5BA29C46640004F8046 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B929C46640004F8046 /* Persistence.swift */; };
+		FE75B5BD29C46640004F8046 /* VeepeeAssessment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5BB29C46640004F8046 /* VeepeeAssessment.xcdatamodeld */; };
+		FE75B5C729C46640004F8046 /* VeepeeAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5C629C46640004F8046 /* VeepeeAssessmentTests.swift */; };
+		FE75B5D129C46640004F8046 /* VeepeeAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5D029C46640004F8046 /* VeepeeAssessmentUITests.swift */; };
+		FE75B5D329C46640004F8046 /* VeepeeAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5D229C46640004F8046 /* VeepeeAssessmentUITestsLaunchTests.swift */; };
+		FE75B5E829C4689F004F8046 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5E729C4689F004F8046 /* ApiClient.swift */; };
+		FE75B5EB29C468CF004F8046 /* VeepeeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EA29C468CF004F8046 /* VeepeeError.swift */; };
+		FE75B5ED29C46948004F8046 /* ApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EC29C46948004F8046 /* ApiClientError.swift */; };
+		FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */; };
+		FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F129C46A4C004F8046 /* HttpMethod.swift */; };
+		FE75B5F429C46B0D004F8046 /* DayForecastDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE75B5C329C46640004F8046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE75B5A529C4663E004F8046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE75B5AC29C4663E004F8046;
+			remoteInfo = VeepeeAssessment;
+		};
+		FE75B5CD29C46640004F8046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE75B5A529C4663E004F8046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE75B5AC29C4663E004F8046;
+			remoteInfo = VeepeeAssessment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FE75B5AD29C4663E004F8046 /* VeepeeAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeepeeAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentApp.swift; sourceTree = "<group>"; };
+		FE75B5B229C4663E004F8046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FE75B5B429C46640004F8046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE75B5B729C46640004F8046 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE75B5B929C46640004F8046 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		FE75B5BC29C46640004F8046 /* VeepeeAssessment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VeepeeAssessment.xcdatamodel; sourceTree = "<group>"; };
+		FE75B5C229C46640004F8046 /* VeepeeAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeepeeAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE75B5C629C46640004F8046 /* VeepeeAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentTests.swift; sourceTree = "<group>"; };
+		FE75B5CC29C46640004F8046 /* VeepeeAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeepeeAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE75B5D029C46640004F8046 /* VeepeeAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentUITests.swift; sourceTree = "<group>"; };
+		FE75B5D229C46640004F8046 /* VeepeeAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FE75B5E729C4689F004F8046 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		FE75B5EA29C468CF004F8046 /* VeepeeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeError.swift; sourceTree = "<group>"; };
+		FE75B5EC29C46948004F8046 /* ApiClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientError.swift; sourceTree = "<group>"; };
+		FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionApiClient.swift; sourceTree = "<group>"; };
+		FE75B5F129C46A4C004F8046 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastDto.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE75B5AA29C4663E004F8046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE75B5BF29C46640004F8046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE75B5C929C46640004F8046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE75B5A429C4663E004F8046 = {
+			isa = PBXGroup;
+			children = (
+				FE75B5AF29C4663E004F8046 /* VeepeeAssessment */,
+				FE75B5C529C46640004F8046 /* VeepeeAssessmentTests */,
+				FE75B5CF29C46640004F8046 /* VeepeeAssessmentUITests */,
+				FE75B5AE29C4663E004F8046 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE75B5AE29C4663E004F8046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5AD29C4663E004F8046 /* VeepeeAssessment.app */,
+				FE75B5C229C46640004F8046 /* VeepeeAssessmentTests.xctest */,
+				FE75B5CC29C46640004F8046 /* VeepeeAssessmentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE75B5AF29C4663E004F8046 /* VeepeeAssessment */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5B229C4663E004F8046 /* ContentView.swift */,
+				FE75B5B929C46640004F8046 /* Persistence.swift */,
+				FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */,
+				FE75B5B429C46640004F8046 /* Assets.xcassets */,
+				FE75B5DF29C467FE004F8046 /* Data */,
+				FE75B5E029C46802004F8046 /* Domain */,
+				FE75B5E129C46807004F8046 /* Presentation */,
+				FE75B5B629C46640004F8046 /* Preview Content */,
+				FE75B5BB29C46640004F8046 /* VeepeeAssessment.xcdatamodeld */,
+			);
+			path = VeepeeAssessment;
+			sourceTree = "<group>";
+		};
+		FE75B5B629C46640004F8046 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5B729C46640004F8046 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE75B5C529C46640004F8046 /* VeepeeAssessmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5C629C46640004F8046 /* VeepeeAssessmentTests.swift */,
+			);
+			path = VeepeeAssessmentTests;
+			sourceTree = "<group>";
+		};
+		FE75B5CF29C46640004F8046 /* VeepeeAssessmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5D029C46640004F8046 /* VeepeeAssessmentUITests.swift */,
+				FE75B5D229C46640004F8046 /* VeepeeAssessmentUITestsLaunchTests.swift */,
+			);
+			path = VeepeeAssessmentUITests;
+			sourceTree = "<group>";
+		};
+		FE75B5DF29C467FE004F8046 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5E229C46835004F8046 /* ApiClient */,
+				FE75B5E329C4683F004F8046 /* Dto */,
+				FE75B5E429C46846004F8046 /* Mappers */,
+				FE75B5E529C4684F004F8046 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FE75B5E029C46802004F8046 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5E929C468B9004F8046 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FE75B5E129C46807004F8046 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FE75B5E229C46835004F8046 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5E729C4689F004F8046 /* ApiClient.swift */,
+				FE75B5EC29C46948004F8046 /* ApiClientError.swift */,
+				FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */,
+				FE75B5F129C46A4C004F8046 /* HttpMethod.swift */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		FE75B5E329C4683F004F8046 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		FE75B5E429C46846004F8046 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		FE75B5E529C4684F004F8046 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5E629C46859004F8046 /* ForecastRepository */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FE75B5E629C46859004F8046 /* ForecastRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ForecastRepository;
+			sourceTree = "<group>";
+		};
+		FE75B5E929C468B9004F8046 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B5EA29C468CF004F8046 /* VeepeeError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE75B5AC29C4663E004F8046 /* VeepeeAssessment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE75B5D629C46640004F8046 /* Build configuration list for PBXNativeTarget "VeepeeAssessment" */;
+			buildPhases = (
+				FE75B5A929C4663E004F8046 /* Sources */,
+				FE75B5AA29C4663E004F8046 /* Frameworks */,
+				FE75B5AB29C4663E004F8046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VeepeeAssessment;
+			productName = VeepeeAssessment;
+			productReference = FE75B5AD29C4663E004F8046 /* VeepeeAssessment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FE75B5C129C46640004F8046 /* VeepeeAssessmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE75B5D929C46640004F8046 /* Build configuration list for PBXNativeTarget "VeepeeAssessmentTests" */;
+			buildPhases = (
+				FE75B5BE29C46640004F8046 /* Sources */,
+				FE75B5BF29C46640004F8046 /* Frameworks */,
+				FE75B5C029C46640004F8046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE75B5C429C46640004F8046 /* PBXTargetDependency */,
+			);
+			name = VeepeeAssessmentTests;
+			productName = VeepeeAssessmentTests;
+			productReference = FE75B5C229C46640004F8046 /* VeepeeAssessmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FE75B5CB29C46640004F8046 /* VeepeeAssessmentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE75B5DC29C46640004F8046 /* Build configuration list for PBXNativeTarget "VeepeeAssessmentUITests" */;
+			buildPhases = (
+				FE75B5C829C46640004F8046 /* Sources */,
+				FE75B5C929C46640004F8046 /* Frameworks */,
+				FE75B5CA29C46640004F8046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE75B5CE29C46640004F8046 /* PBXTargetDependency */,
+			);
+			name = VeepeeAssessmentUITests;
+			productName = VeepeeAssessmentUITests;
+			productReference = FE75B5CC29C46640004F8046 /* VeepeeAssessmentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE75B5A529C4663E004F8046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					FE75B5AC29C4663E004F8046 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					FE75B5C129C46640004F8046 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FE75B5AC29C4663E004F8046;
+					};
+					FE75B5CB29C46640004F8046 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FE75B5AC29C4663E004F8046;
+					};
+				};
+			};
+			buildConfigurationList = FE75B5A829C4663E004F8046 /* Build configuration list for PBXProject "VeepeeAssessment" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE75B5A429C4663E004F8046;
+			productRefGroup = FE75B5AE29C4663E004F8046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE75B5AC29C4663E004F8046 /* VeepeeAssessment */,
+				FE75B5C129C46640004F8046 /* VeepeeAssessmentTests */,
+				FE75B5CB29C46640004F8046 /* VeepeeAssessmentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE75B5AB29C4663E004F8046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE75B5B829C46640004F8046 /* Preview Assets.xcassets in Resources */,
+				FE75B5B529C46640004F8046 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE75B5C029C46640004F8046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE75B5CA29C46640004F8046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE75B5A929C4663E004F8046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE75B5ED29C46948004F8046 /* ApiClientError.swift in Sources */,
+				FE75B5EB29C468CF004F8046 /* VeepeeError.swift in Sources */,
+				FE75B5BA29C46640004F8046 /* Persistence.swift in Sources */,
+				FE75B5BD29C46640004F8046 /* VeepeeAssessment.xcdatamodeld in Sources */,
+				FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */,
+				FE75B5F429C46B0D004F8046 /* DayForecastDto.swift in Sources */,
+				FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */,
+				FE75B5B329C4663E004F8046 /* ContentView.swift in Sources */,
+				FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */,
+				FE75B5E829C4689F004F8046 /* ApiClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE75B5BE29C46640004F8046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE75B5C729C46640004F8046 /* VeepeeAssessmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE75B5C829C46640004F8046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE75B5D329C46640004F8046 /* VeepeeAssessmentUITestsLaunchTests.swift in Sources */,
+				FE75B5D129C46640004F8046 /* VeepeeAssessmentUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE75B5C429C46640004F8046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE75B5AC29C4663E004F8046 /* VeepeeAssessment */;
+			targetProxy = FE75B5C329C46640004F8046 /* PBXContainerItemProxy */;
+		};
+		FE75B5CE29C46640004F8046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE75B5AC29C4663E004F8046 /* VeepeeAssessment */;
+			targetProxy = FE75B5CD29C46640004F8046 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FE75B5D429C46640004F8046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE75B5D529C46640004F8046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE75B5D729C46640004F8046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VeepeeAssessment/Preview Content\"";
+				DEVELOPMENT_TEAM = SVW6HF2MTV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeniellandestoy.VeepeeAssessment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE75B5D829C46640004F8046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VeepeeAssessment/Preview Content\"";
+				DEVELOPMENT_TEAM = SVW6HF2MTV;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeniellandestoy.VeepeeAssessment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FE75B5DA29C46640004F8046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SVW6HF2MTV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeniellandestoy.VeepeeAssessmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeepeeAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VeepeeAssessment";
+			};
+			name = Debug;
+		};
+		FE75B5DB29C46640004F8046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SVW6HF2MTV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeniellandestoy.VeepeeAssessmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeepeeAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VeepeeAssessment";
+			};
+			name = Release;
+		};
+		FE75B5DD29C46640004F8046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SVW6HF2MTV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeniellandestoy.VeepeeAssessmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VeepeeAssessment;
+			};
+			name = Debug;
+		};
+		FE75B5DE29C46640004F8046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SVW6HF2MTV;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yeniellandestoy.VeepeeAssessmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VeepeeAssessment;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE75B5A829C4663E004F8046 /* Build configuration list for PBXProject "VeepeeAssessment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE75B5D429C46640004F8046 /* Debug */,
+				FE75B5D529C46640004F8046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE75B5D629C46640004F8046 /* Build configuration list for PBXNativeTarget "VeepeeAssessment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE75B5D729C46640004F8046 /* Debug */,
+				FE75B5D829C46640004F8046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE75B5D929C46640004F8046 /* Build configuration list for PBXNativeTarget "VeepeeAssessmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE75B5DA29C46640004F8046 /* Debug */,
+				FE75B5DB29C46640004F8046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE75B5DC29C46640004F8046 /* Build configuration list for PBXNativeTarget "VeepeeAssessmentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE75B5DD29C46640004F8046 /* Debug */,
+				FE75B5DE29C46640004F8046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE75B5BB29C46640004F8046 /* VeepeeAssessment.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE75B5BC29C46640004F8046 /* VeepeeAssessment.xcdatamodel */,
+			);
+			currentVersion = FE75B5BC29C46640004F8046 /* VeepeeAssessment.xcdatamodel */;
+			path = VeepeeAssessment.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FE75B5A529C4663E004F8046 /* Project object */;
+}
