@@ -19,7 +19,7 @@
 		FE75B5D129C46640004F8046 /* VeepeeAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5D029C46640004F8046 /* VeepeeAssessmentUITests.swift */; };
 		FE75B5D329C46640004F8046 /* VeepeeAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5D229C46640004F8046 /* VeepeeAssessmentUITestsLaunchTests.swift */; };
 		FE75B5E829C4689F004F8046 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5E729C4689F004F8046 /* ApiClient.swift */; };
-		FE75B5EB29C468CF004F8046 /* VeepeeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EA29C468CF004F8046 /* VeepeeError.swift */; };
+		FE75B5EB29C468CF004F8046 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EA29C468CF004F8046 /* DomainError.swift */; };
 		FE75B5ED29C46948004F8046 /* ApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EC29C46948004F8046 /* ApiClientError.swift */; };
 		FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */; };
 		FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F129C46A4C004F8046 /* HttpMethod.swift */; };
@@ -31,6 +31,21 @@
 		FE75B60629C47082004F8046 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60529C47082004F8046 /* Nimble */; };
 		FE75B60929C470E4004F8046 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60829C470E4004F8046 /* OHHTTPStubs */; };
 		FE75B60B29C470E4004F8046 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60A29C470E4004F8046 /* OHHTTPStubsSwift */; };
+		FE75B60D29C47114004F8046 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B60C29C47114004F8046 /* Factory.swift */; };
+		FE75B61029C47146004F8046 /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B60F29C47146004F8046 /* ForecastRepository.swift */; };
+		FE75B61229C47206004F8046 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61129C47206004F8046 /* Forecast.swift */; };
+		FE75B61629C472AD004F8046 /* ForecastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */; };
+		FE75B61829C47363004F8046 /* ForecastDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61729C47363004F8046 /* ForecastDataSource.swift */; };
+		FE75B61A29C473AC004F8046 /* ForecastApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */; };
+		FE75B61D29C476BB004F8046 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61C29C476BB004F8046 /* ApiConstants.swift */; };
+		FE75B61F29C478ED004F8046 /* ApiDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61E29C478ED004F8046 /* ApiDtoMapper.swift */; };
+		FE75B62129C47955004F8046 /* LocalDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62029C47955004F8046 /* LocalDtoMapper.swift */; };
+		FE75B62329C47B94004F8046 /* DayForecastMainDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62229C47B94004F8046 /* DayForecastMainDto.swift */; };
+		FE75B62529C47D78004F8046 /* WeatherDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62429C47D78004F8046 /* WeatherDto.swift */; };
+		FE75B62729C47DEF004F8046 /* CloudsDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62629C47DEF004F8046 /* CloudsDto.swift */; };
+		FE75B62929C47F07004F8046 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62829C47F07004F8046 /* WindDto.swift */; };
+		FE75B62E29C4878C004F8046 /* GetForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62D29C4878C004F8046 /* GetForecastUseCase.swift */; };
+		FE75B63029C48816004F8046 /* DomainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62F29C48816004F8046 /* DomainConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,11 +85,26 @@
 		FE75B5D029C46640004F8046 /* VeepeeAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentUITests.swift; sourceTree = "<group>"; };
 		FE75B5D229C46640004F8046 /* VeepeeAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FE75B5E729C4689F004F8046 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		FE75B5EA29C468CF004F8046 /* VeepeeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeError.swift; sourceTree = "<group>"; };
+		FE75B5EA29C468CF004F8046 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		FE75B5EC29C46948004F8046 /* ApiClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientError.swift; sourceTree = "<group>"; };
 		FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionApiClient.swift; sourceTree = "<group>"; };
 		FE75B5F129C46A4C004F8046 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastDto.swift; sourceTree = "<group>"; };
+		FE75B60C29C47114004F8046 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		FE75B60F29C47146004F8046 /* ForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepository.swift; sourceTree = "<group>"; };
+		FE75B61129C47206004F8046 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryImpl.swift; sourceTree = "<group>"; };
+		FE75B61729C47363004F8046 /* ForecastDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataSource.swift; sourceTree = "<group>"; };
+		FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastApiDataSource.swift; sourceTree = "<group>"; };
+		FE75B61C29C476BB004F8046 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		FE75B61E29C478ED004F8046 /* ApiDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDtoMapper.swift; sourceTree = "<group>"; };
+		FE75B62029C47955004F8046 /* LocalDtoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDtoMapper.swift; sourceTree = "<group>"; };
+		FE75B62229C47B94004F8046 /* DayForecastMainDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastMainDto.swift; sourceTree = "<group>"; };
+		FE75B62429C47D78004F8046 /* WeatherDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDto.swift; sourceTree = "<group>"; };
+		FE75B62629C47DEF004F8046 /* CloudsDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudsDto.swift; sourceTree = "<group>"; };
+		FE75B62829C47F07004F8046 /* WindDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WindDto.swift; path = /Users/yeniel/workspace/iOS_Archive/VeepeeAssessment/VeepeeAssessment/Data/Dto/WindDto.swift; sourceTree = "<absolute>"; };
+		FE75B62D29C4878C004F8046 /* GetForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCase.swift; sourceTree = "<group>"; };
+		FE75B62F29C48816004F8046 /* DomainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +195,7 @@
 				FE75B5E129C46807004F8046 /* Presentation */,
 				FE75B5B629C46640004F8046 /* Preview Content */,
 				FE75B5BB29C46640004F8046 /* VeepeeAssessment.xcdatamodeld */,
+				FE75B60C29C47114004F8046 /* Factory.swift */,
 			);
 			path = VeepeeAssessment;
 			sourceTree = "<group>";
@@ -208,7 +239,10 @@
 		FE75B5E029C46802004F8046 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FE75B62C29C4877B004F8046 /* UseCases */,
+				FE75B60E29C47130004F8046 /* Repositories */,
 				FE75B5E929C468B9004F8046 /* Models */,
+				FE75B62F29C48816004F8046 /* DomainConstants.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -223,10 +257,11 @@
 		FE75B5E229C46835004F8046 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
-				FE75B5E729C4689F004F8046 /* ApiClient.swift */,
 				FE75B5EC29C46948004F8046 /* ApiClientError.swift */,
+				FE75B5E729C4689F004F8046 /* ApiClient.swift */,
 				FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */,
 				FE75B5F129C46A4C004F8046 /* HttpMethod.swift */,
+				FE75B61C29C476BB004F8046 /* ApiConstants.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -234,7 +269,11 @@
 		FE75B5E329C4683F004F8046 /* Dto */ = {
 			isa = PBXGroup;
 			children = (
+				FE75B62829C47F07004F8046 /* WindDto.swift */,
 				FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */,
+				FE75B62229C47B94004F8046 /* DayForecastMainDto.swift */,
+				FE75B62429C47D78004F8046 /* WeatherDto.swift */,
+				FE75B62629C47DEF004F8046 /* CloudsDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -242,6 +281,8 @@
 		FE75B5E429C46846004F8046 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
+				FE75B61E29C478ED004F8046 /* ApiDtoMapper.swift */,
+				FE75B62029C47955004F8046 /* LocalDtoMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -257,6 +298,9 @@
 		FE75B5E629C46859004F8046 /* ForecastRepository */ = {
 			isa = PBXGroup;
 			children = (
+				FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */,
+				FE75B61729C47363004F8046 /* ForecastDataSource.swift */,
+				FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */,
 			);
 			path = ForecastRepository;
 			sourceTree = "<group>";
@@ -264,9 +308,26 @@
 		FE75B5E929C468B9004F8046 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FE75B5EA29C468CF004F8046 /* VeepeeError.swift */,
+				FE75B5EA29C468CF004F8046 /* DomainError.swift */,
+				FE75B61129C47206004F8046 /* Forecast.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FE75B60E29C47130004F8046 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B60F29C47146004F8046 /* ForecastRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FE75B62C29C4877B004F8046 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				FE75B62D29C4878C004F8046 /* GetForecastUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,12 +549,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE75B5ED29C46948004F8046 /* ApiClientError.swift in Sources */,
-				FE75B5EB29C468CF004F8046 /* VeepeeError.swift in Sources */,
+				FE75B63029C48816004F8046 /* DomainConstants.swift in Sources */,
+				FE75B5EB29C468CF004F8046 /* DomainError.swift in Sources */,
+				FE75B61A29C473AC004F8046 /* ForecastApiDataSource.swift in Sources */,
+				FE75B62729C47DEF004F8046 /* CloudsDto.swift in Sources */,
+				FE75B61829C47363004F8046 /* ForecastDataSource.swift in Sources */,
+				FE75B62329C47B94004F8046 /* DayForecastMainDto.swift in Sources */,
+				FE75B61F29C478ED004F8046 /* ApiDtoMapper.swift in Sources */,
+				FE75B62129C47955004F8046 /* LocalDtoMapper.swift in Sources */,
+				FE75B61D29C476BB004F8046 /* ApiConstants.swift in Sources */,
+				FE75B60D29C47114004F8046 /* Factory.swift in Sources */,
 				FE75B5BA29C46640004F8046 /* Persistence.swift in Sources */,
+				FE75B62E29C4878C004F8046 /* GetForecastUseCase.swift in Sources */,
 				FE75B5BD29C46640004F8046 /* VeepeeAssessment.xcdatamodeld in Sources */,
 				FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */,
+				FE75B62929C47F07004F8046 /* WindDto.swift in Sources */,
+				FE75B61029C47146004F8046 /* ForecastRepository.swift in Sources */,
+				FE75B61229C47206004F8046 /* Forecast.swift in Sources */,
 				FE75B5F429C46B0D004F8046 /* DayForecastDto.swift in Sources */,
+				FE75B62529C47D78004F8046 /* WeatherDto.swift in Sources */,
 				FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */,
+				FE75B61629C472AD004F8046 /* ForecastRepositoryImpl.swift in Sources */,
 				FE75B5B329C4663E004F8046 /* ContentView.swift in Sources */,
 				FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */,
 				FE75B5E829C4689F004F8046 /* ApiClient.swift in Sources */,

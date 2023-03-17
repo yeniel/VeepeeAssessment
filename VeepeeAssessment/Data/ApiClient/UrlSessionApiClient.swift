@@ -8,11 +8,10 @@
 import Foundation
 
 struct UrlSessionApiClient: ApiClient {
-    static let host = "https://api.openweathermap.org"
     let decoder: JSONDecoder = .init()
 
-    func get<T: Decodable>(path: String) async throws -> T {
-        guard let url = URL(string: "\(UrlSessionApiClient.host)/\(path)") else {
+    func get<T: Decodable>(url: String) async throws -> T {
+        guard let url = URL(string: url) else {
             throw ApiClientError.badUrl
         }
 

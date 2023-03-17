@@ -7,7 +7,8 @@
 
 import Foundation
 
-enum VeepeeError: Error {
+enum DomainError: Error {
     case networkError
+    case decodingError
     case unknown
 }

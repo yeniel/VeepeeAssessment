@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum ApiClientError: Error{
+enum ApiClientError: Error {
     case badUrl, requestError, decodingError, statusNotOK
 }
