@@ -17,12 +17,9 @@ struct DayForecast {
     let seaLevel: Int
     let groundLevel: Int
     let humidity: Int
-    let mainWeather: String
-    let mainWeatherIcon: String
+    let weather: Weather
     let cloudiness: Int
-    let windSpeed: Double
-    let windDirectionDegrees: Int
-    let windGust: Double
+    let wind: Wind
     let visibility: Int
     let precipitationProbability: Double
 }

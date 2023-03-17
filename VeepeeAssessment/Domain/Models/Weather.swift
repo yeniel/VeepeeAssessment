@@ -1,5 +1,5 @@
 //
-//  WeatherDto.swift
+//  Weather.swift
 //  VeepeeAssessment
 //
 //  Created by Yeniel Landestoy on 17/3/23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeatherDto: Codable {
+struct Weather {
     let description: String
     let icon: String
 }

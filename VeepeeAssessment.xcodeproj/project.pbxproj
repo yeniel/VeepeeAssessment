@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		89AD11C8C57D1609940E1918 /* Pods_VeepeeAssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C8DE601C250F7AB402EE42 /* Pods_VeepeeAssessmentTests.framework */; };
 		FB83168B7B492FCEF717F759 /* Pods_VeepeeAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1303DBBC262E33ABBFD5C1B /* Pods_VeepeeAssessment.framework */; };
+		FE12C13329C4A0C400102C52 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13229C4A0C400102C52 /* Wind.swift */; };
+		FE12C13529C4A47800102C52 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13429C4A47800102C52 /* Weather.swift */; };
+		FE12C13A29C4A63F00102C52 /* ScreenStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13929C4A63F00102C52 /* ScreenStatus.swift */; };
 		FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */; };
 		FE75B5B329C4663E004F8046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B229C4663E004F8046 /* ContentView.swift */; };
 		FE75B5B529C46640004F8046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75B5B429C46640004F8046 /* Assets.xcassets */; };
@@ -33,7 +36,7 @@
 		FE75B60B29C470E4004F8046 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60A29C470E4004F8046 /* OHHTTPStubsSwift */; };
 		FE75B60D29C47114004F8046 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B60C29C47114004F8046 /* Factory.swift */; };
 		FE75B61029C47146004F8046 /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B60F29C47146004F8046 /* ForecastRepository.swift */; };
-		FE75B61229C47206004F8046 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61129C47206004F8046 /* Forecast.swift */; };
+		FE75B61229C47206004F8046 /* DayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61129C47206004F8046 /* DayForecast.swift */; };
 		FE75B61629C472AD004F8046 /* ForecastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */; };
 		FE75B61829C47363004F8046 /* ForecastDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61729C47363004F8046 /* ForecastDataSource.swift */; };
 		FE75B61A29C473AC004F8046 /* ForecastApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */; };
@@ -72,6 +75,9 @@
 		A1303DBBC262E33ABBFD5C1B /* Pods_VeepeeAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeepeeAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42BB0454344EAA623599BED /* Pods-VeepeeAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeepeeAssessment.debug.xcconfig"; path = "Target Support Files/Pods-VeepeeAssessment/Pods-VeepeeAssessment.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F81EE0475B0E3C7289DA7D /* Pods-VeepeeAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeepeeAssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-VeepeeAssessmentTests/Pods-VeepeeAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE12C13229C4A0C400102C52 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		FE12C13429C4A47800102C52 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		FE12C13929C4A63F00102C52 /* ScreenStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStatus.swift; sourceTree = "<group>"; };
 		FE75B5AD29C4663E004F8046 /* VeepeeAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeepeeAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentApp.swift; sourceTree = "<group>"; };
 		FE75B5B229C4663E004F8046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,7 +98,7 @@
 		FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastDto.swift; sourceTree = "<group>"; };
 		FE75B60C29C47114004F8046 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		FE75B60F29C47146004F8046 /* ForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepository.swift; sourceTree = "<group>"; };
-		FE75B61129C47206004F8046 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		FE75B61129C47206004F8046 /* DayForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecast.swift; sourceTree = "<group>"; };
 		FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryImpl.swift; sourceTree = "<group>"; };
 		FE75B61729C47363004F8046 /* ForecastDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataSource.swift; sourceTree = "<group>"; };
 		FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastApiDataSource.swift; sourceTree = "<group>"; };
@@ -159,6 +165,44 @@
 				33E0F4100CC15080E3A63BF0 /* Pods-VeepeeAssessmentTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE12C13629C4A5C600102C52 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FE12C13729C4A5CE00102C52 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FE12C13829C4A5D500102C52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE12C13C29C4A65200102C52 /* Detail */,
+				FE12C13B29C4A64C00102C52 /* Home */,
+				FE12C13929C4A63F00102C52 /* ScreenStatus.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FE12C13B29C4A64C00102C52 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE12C13C29C4A65200102C52 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		FE75B5A429C4663E004F8046 = {
@@ -250,6 +294,9 @@
 		FE75B5E129C46807004F8046 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FE12C13829C4A5D500102C52 /* Views */,
+				FE12C13729C4A5CE00102C52 /* Utils */,
+				FE12C13629C4A5C600102C52 /* Router */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -309,7 +356,9 @@
 			isa = PBXGroup;
 			children = (
 				FE75B5EA29C468CF004F8046 /* DomainError.swift */,
-				FE75B61129C47206004F8046 /* Forecast.swift */,
+				FE75B61129C47206004F8046 /* DayForecast.swift */,
+				FE12C13229C4A0C400102C52 /* Wind.swift */,
+				FE12C13429C4A47800102C52 /* Weather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -561,11 +610,13 @@
 				FE75B60D29C47114004F8046 /* Factory.swift in Sources */,
 				FE75B5BA29C46640004F8046 /* Persistence.swift in Sources */,
 				FE75B62E29C4878C004F8046 /* GetForecastUseCase.swift in Sources */,
+				FE12C13529C4A47800102C52 /* Weather.swift in Sources */,
 				FE75B5BD29C46640004F8046 /* VeepeeAssessment.xcdatamodeld in Sources */,
 				FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */,
 				FE75B62929C47F07004F8046 /* WindDto.swift in Sources */,
+				FE12C13A29C4A63F00102C52 /* ScreenStatus.swift in Sources */,
 				FE75B61029C47146004F8046 /* ForecastRepository.swift in Sources */,
-				FE75B61229C47206004F8046 /* Forecast.swift in Sources */,
+				FE75B61229C47206004F8046 /* DayForecast.swift in Sources */,
 				FE75B5F429C46B0D004F8046 /* DayForecastDto.swift in Sources */,
 				FE75B62529C47D78004F8046 /* WeatherDto.swift in Sources */,
 				FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */,
@@ -573,6 +624,7 @@
 				FE75B5B329C4663E004F8046 /* ContentView.swift in Sources */,
 				FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */,
 				FE75B5E829C4689F004F8046 /* ApiClient.swift in Sources */,
+				FE12C13329C4A0C400102C52 /* Wind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

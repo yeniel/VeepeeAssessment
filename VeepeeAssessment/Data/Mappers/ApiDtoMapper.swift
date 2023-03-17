@@ -19,12 +19,16 @@ struct ApiDtoMapper {
             seaLevel: dto.main.seaLevel,
             groundLevel: dto.main.groundLevel,
             humidity: dto.main.humidity,
-            mainWeather: dto.weather.first?.main ?? "",
-            mainWeatherIcon: dto.weather.first?.icon ?? "",
+            weather: Weather(
+                description: dto.weather.first?.description ?? "",
+                icon: dto.weather.first?.icon ?? ""
+            ),
             cloudiness: dto.clouds.cloudiness,
-            windSpeed: dto.wind.speed,
-            windDirectionDegrees: dto.wind.directionDegrees,
-            windGust: dto.wind.gust,
+            wind: Wind(
+                speed: dto.wind.speed,
+                directionDegrees: dto.wind.directionDegrees,
+                gust: dto.wind.gust
+            ),
             visibility: dto.visibility,
             precipitationProbability: dto.precipitationProbability
         )
