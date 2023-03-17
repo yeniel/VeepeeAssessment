@@ -12,8 +12,13 @@
 		FE12C13329C4A0C400102C52 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13229C4A0C400102C52 /* Wind.swift */; };
 		FE12C13529C4A47800102C52 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13429C4A47800102C52 /* Weather.swift */; };
 		FE12C13A29C4A63F00102C52 /* ScreenStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13929C4A63F00102C52 /* ScreenStatus.swift */; };
+		FE12C13E29C4ABA000102C52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13D29C4ABA000102C52 /* HomeView.swift */; };
+		FE12C14029C4AC9E00102C52 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13F29C4AC9E00102C52 /* AppCoordinator.swift */; };
+		FE12C14229C4ACDA00102C52 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14129C4ACDA00102C52 /* MainCoordinator.swift */; };
+		FE12C14429C4AD3900102C52 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14329C4AD3900102C52 /* HomeViewModel.swift */; };
+		FE12C14629C4ADC700102C52 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14529C4ADC700102C52 /* DetailView.swift */; };
+		FE12C14829C4ADE700102C52 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14729C4ADE700102C52 /* DetailViewModel.swift */; };
 		FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */; };
-		FE75B5B329C4663E004F8046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B229C4663E004F8046 /* ContentView.swift */; };
 		FE75B5B529C46640004F8046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75B5B429C46640004F8046 /* Assets.xcassets */; };
 		FE75B5B829C46640004F8046 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75B5B729C46640004F8046 /* Preview Assets.xcassets */; };
 		FE75B5BA29C46640004F8046 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B929C46640004F8046 /* Persistence.swift */; };
@@ -78,9 +83,14 @@
 		FE12C13229C4A0C400102C52 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		FE12C13429C4A47800102C52 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		FE12C13929C4A63F00102C52 /* ScreenStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenStatus.swift; sourceTree = "<group>"; };
+		FE12C13D29C4ABA000102C52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FE12C13F29C4AC9E00102C52 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FE12C14129C4ACDA00102C52 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FE12C14329C4AD3900102C52 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FE12C14529C4ADC700102C52 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FE12C14729C4ADE700102C52 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		FE75B5AD29C4663E004F8046 /* VeepeeAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeepeeAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentApp.swift; sourceTree = "<group>"; };
-		FE75B5B229C4663E004F8046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE75B5B429C46640004F8046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE75B5B729C46640004F8046 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE75B5B929C46640004F8046 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -170,6 +180,8 @@
 		FE12C13629C4A5C600102C52 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				FE12C13F29C4AC9E00102C52 /* AppCoordinator.swift */,
+				FE12C14129C4ACDA00102C52 /* MainCoordinator.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -194,6 +206,8 @@
 		FE12C13B29C4A64C00102C52 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FE12C13D29C4ABA000102C52 /* HomeView.swift */,
+				FE12C14329C4AD3900102C52 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -201,6 +215,8 @@
 		FE12C13C29C4A65200102C52 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				FE12C14529C4ADC700102C52 /* DetailView.swift */,
+				FE12C14729C4ADE700102C52 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -230,7 +246,7 @@
 		FE75B5AF29C4663E004F8046 /* VeepeeAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				FE75B5B229C4663E004F8046 /* ContentView.swift */,
+				FE75B60C29C47114004F8046 /* Factory.swift */,
 				FE75B5B929C46640004F8046 /* Persistence.swift */,
 				FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */,
 				FE75B5B429C46640004F8046 /* Assets.xcassets */,
@@ -239,7 +255,6 @@
 				FE75B5E129C46807004F8046 /* Presentation */,
 				FE75B5B629C46640004F8046 /* Preview Content */,
 				FE75B5BB29C46640004F8046 /* VeepeeAssessment.xcdatamodeld */,
-				FE75B60C29C47114004F8046 /* Factory.swift */,
 			);
 			path = VeepeeAssessment;
 			sourceTree = "<group>";
@@ -600,6 +615,7 @@
 				FE75B5ED29C46948004F8046 /* ApiClientError.swift in Sources */,
 				FE75B63029C48816004F8046 /* DomainConstants.swift in Sources */,
 				FE75B5EB29C468CF004F8046 /* DomainError.swift in Sources */,
+				FE12C14429C4AD3900102C52 /* HomeViewModel.swift in Sources */,
 				FE75B61A29C473AC004F8046 /* ForecastApiDataSource.swift in Sources */,
 				FE75B62729C47DEF004F8046 /* CloudsDto.swift in Sources */,
 				FE75B61829C47363004F8046 /* ForecastDataSource.swift in Sources */,
@@ -609,19 +625,23 @@
 				FE75B61D29C476BB004F8046 /* ApiConstants.swift in Sources */,
 				FE75B60D29C47114004F8046 /* Factory.swift in Sources */,
 				FE75B5BA29C46640004F8046 /* Persistence.swift in Sources */,
+				FE12C14029C4AC9E00102C52 /* AppCoordinator.swift in Sources */,
+				FE12C13E29C4ABA000102C52 /* HomeView.swift in Sources */,
 				FE75B62E29C4878C004F8046 /* GetForecastUseCase.swift in Sources */,
+				FE12C14629C4ADC700102C52 /* DetailView.swift in Sources */,
+				FE12C14829C4ADE700102C52 /* DetailViewModel.swift in Sources */,
 				FE12C13529C4A47800102C52 /* Weather.swift in Sources */,
 				FE75B5BD29C46640004F8046 /* VeepeeAssessment.xcdatamodeld in Sources */,
 				FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */,
 				FE75B62929C47F07004F8046 /* WindDto.swift in Sources */,
 				FE12C13A29C4A63F00102C52 /* ScreenStatus.swift in Sources */,
+				FE12C14229C4ACDA00102C52 /* MainCoordinator.swift in Sources */,
 				FE75B61029C47146004F8046 /* ForecastRepository.swift in Sources */,
 				FE75B61229C47206004F8046 /* DayForecast.swift in Sources */,
 				FE75B5F429C46B0D004F8046 /* DayForecastDto.swift in Sources */,
 				FE75B62529C47D78004F8046 /* WeatherDto.swift in Sources */,
 				FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */,
 				FE75B61629C472AD004F8046 /* ForecastRepositoryImpl.swift in Sources */,
-				FE75B5B329C4663E004F8046 /* ContentView.swift in Sources */,
 				FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */,
 				FE75B5E829C4689F004F8046 /* ApiClient.swift in Sources */,
 				FE12C13329C4A0C400102C52 /* Wind.swift in Sources */,

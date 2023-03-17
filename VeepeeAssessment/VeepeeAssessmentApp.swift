@@ -6,15 +6,30 @@
 //
 
 import SwiftUI
+import Stinsen
 
 @main
-struct VeepeeAssessmentApp: App {
-    let persistenceController = PersistenceController.shared
+struct AppLauncher {
+    static func main() throws {
+        if NSClassFromString("XCTestCase") == nil {
+            VeepeeAssessmentApp.main()
+        } else {
+            TestApp.main()
+        }
+    }
+}
 
+struct VeepeeAssessmentApp: App {
+    @SceneBuilder
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            AppCoordinator().view()
         }
+    }
+}
+
+struct TestApp: App {
+    var body: some Scene {
+        WindowGroup { Text("Running Unit Tests") }
     }
 }

@@ -24,8 +24,8 @@ struct GetForecastUseCaseImpl: GetForecastUseCase {
             let dayForecastList = try await forecastRepository.getForecast(city: city, days: days)
 
             return .success(dayForecastList)
-        } catch (let error) {
-            switch(error) {
+        } catch let error {
+            switch error {
             case ApiClientError.decodingError:
                 return .failure(.decodingError)
             default:
