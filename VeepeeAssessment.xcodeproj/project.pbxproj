@@ -24,6 +24,13 @@
 		FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */; };
 		FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F129C46A4C004F8046 /* HttpMethod.swift */; };
 		FE75B5F429C46B0D004F8046 /* DayForecastDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */; };
+		FE75B5FA29C46F38004F8046 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B5F929C46F38004F8046 /* Stinsen */; };
+		FE75B5FD29C46F55004F8046 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B5FC29C46F55004F8046 /* Factory */; };
+		FE75B60029C46F7B004F8046 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B5FF29C46F7B004F8046 /* SnapshotTesting */; };
+		FE75B60329C47033004F8046 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60229C47033004F8046 /* Quick */; };
+		FE75B60629C47082004F8046 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60529C47082004F8046 /* Nimble */; };
+		FE75B60929C470E4004F8046 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60829C470E4004F8046 /* OHHTTPStubs */; };
+		FE75B60B29C470E4004F8046 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60A29C470E4004F8046 /* OHHTTPStubsSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE75B5FD29C46F55004F8046 /* Factory in Frameworks */,
 				FB83168B7B492FCEF717F759 /* Pods_VeepeeAssessment.framework in Frameworks */,
+				FE75B5FA29C46F38004F8046 /* Stinsen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +92,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE75B60929C470E4004F8046 /* OHHTTPStubs in Frameworks */,
+				FE75B60B29C470E4004F8046 /* OHHTTPStubsSwift in Frameworks */,
+				FE75B60329C47033004F8046 /* Quick in Frameworks */,
+				FE75B60629C47082004F8046 /* Nimble in Frameworks */,
 				89AD11C8C57D1609940E1918 /* Pods_VeepeeAssessmentTests.framework in Frameworks */,
+				FE75B60029C46F7B004F8046 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +287,10 @@
 			dependencies = (
 			);
 			name = VeepeeAssessment;
+			packageProductDependencies = (
+				FE75B5F929C46F38004F8046 /* Stinsen */,
+				FE75B5FC29C46F55004F8046 /* Factory */,
+			);
 			productName = VeepeeAssessment;
 			productReference = FE75B5AD29C4663E004F8046 /* VeepeeAssessment.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +310,13 @@
 				FE75B5C429C46640004F8046 /* PBXTargetDependency */,
 			);
 			name = VeepeeAssessmentTests;
+			packageProductDependencies = (
+				FE75B5FF29C46F7B004F8046 /* SnapshotTesting */,
+				FE75B60229C47033004F8046 /* Quick */,
+				FE75B60529C47082004F8046 /* Nimble */,
+				FE75B60829C470E4004F8046 /* OHHTTPStubs */,
+				FE75B60A29C470E4004F8046 /* OHHTTPStubsSwift */,
+			);
 			productName = VeepeeAssessmentTests;
 			productReference = FE75B5C229C46640004F8046 /* VeepeeAssessmentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -346,6 +371,14 @@
 				Base,
 			);
 			mainGroup = FE75B5A429C4663E004F8046;
+			packageReferences = (
+				FE75B5F829C46F38004F8046 /* XCRemoteSwiftPackageReference "stinsen" */,
+				FE75B5FB29C46F55004F8046 /* XCRemoteSwiftPackageReference "Factory" */,
+				FE75B5FE29C46F7B004F8046 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				FE75B60129C47033004F8046 /* XCRemoteSwiftPackageReference "Quick" */,
+				FE75B60429C47082004F8046 /* XCRemoteSwiftPackageReference "Nimble" */,
+				FE75B60729C470E4004F8046 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+			);
 			productRefGroup = FE75B5AE29C4663E004F8046 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -792,6 +825,95 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE75B5F829C46F38004F8046 /* XCRemoteSwiftPackageReference "stinsen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rundfunk47/stinsen";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		FE75B5FB29C46F55004F8046 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		FE75B5FE29C46F7B004F8046 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		FE75B60129C47033004F8046 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.1;
+			};
+		};
+		FE75B60429C47082004F8046 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.0.0;
+			};
+		};
+		FE75B60729C470E4004F8046 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE75B5F929C46F38004F8046 /* Stinsen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE75B5F829C46F38004F8046 /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
+		};
+		FE75B5FC29C46F55004F8046 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE75B5FB29C46F55004F8046 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		FE75B5FF29C46F7B004F8046 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE75B5FE29C46F7B004F8046 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		FE75B60229C47033004F8046 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE75B60129C47033004F8046 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		FE75B60529C47082004F8046 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE75B60429C47082004F8046 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		FE75B60829C470E4004F8046 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE75B60729C470E4004F8046 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		FE75B60A29C470E4004F8046 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE75B60729C470E4004F8046 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FE75B5BB29C46640004F8046 /* VeepeeAssessment.xcdatamodeld */ = {
