@@ -25,11 +25,14 @@ struct UrlSessionApiClient: ApiClient {
             throw ApiClientError.statusNotOK
         }
 
-        guard let dto = try? JSONDecoder().decode(T.self, from: data) else {
+        do {
+            let dto = try JSONDecoder().decode(T.self, from: data)
+
+            return dto
+        } catch {
+            print(error)
             throw ApiClientError.decodingError
         }
-
-        return dto
     }
 
     private func configureUrlRequest(url: URL, method: HttpMethod = .GET) -> URLRequest {

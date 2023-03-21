@@ -15,7 +15,7 @@ struct ForecastRepositoryImpl: ForecastRepository {
     @Injected(\.apiDtoMapper)
     private var dtoMapper: ApiDtoMapper
 
-    func getForecast(city: String, days: Int) async throws -> [DayForecast] {
+    func getForecast(city: String, days: Int) async throws -> [Forecast] {
         try await apiDataSource.getForecast(city: city, days: days)
             .map { dtoMapper.dtoToModel(dto: $0) }
     }

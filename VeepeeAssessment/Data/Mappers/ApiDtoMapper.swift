@@ -8,8 +8,8 @@
 import Foundation
 
 struct ApiDtoMapper {
-    func dtoToModel(dto: DayForecastDto) -> DayForecast {
-        DayForecast(
+    func dtoToModel(dto: ForecastDto) -> Forecast {
+        Forecast(
             datetime: Date(timeIntervalSince1970: TimeInterval(dto.datetime)),
             temperature: dto.main.temperature,
             feelsLike: dto.main.feelsLike,
@@ -20,6 +20,7 @@ struct ApiDtoMapper {
             groundLevel: dto.main.groundLevel,
             humidity: dto.main.humidity,
             weather: Weather(
+                id: dto.weather.first?.id ?? 0,
                 description: dto.weather.first?.description ?? "",
                 icon: dto.weather.first?.icon ?? ""
             ),

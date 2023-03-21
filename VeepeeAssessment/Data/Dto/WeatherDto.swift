@@ -8,6 +8,7 @@
 import Foundation
 
 struct WeatherDto: Codable {
+    let id: Int
     let description: String
     let icon: String
 }

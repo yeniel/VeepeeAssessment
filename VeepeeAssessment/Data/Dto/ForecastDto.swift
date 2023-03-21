@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DayForecastDto: Codable {
+struct ForecastDto: Codable {
     let datetime: Int64
     let main: DayForecastMainDto
     let weather: [WeatherDto]
@@ -17,7 +17,7 @@ struct DayForecastDto: Codable {
     let precipitationProbability: Double
 
     enum CodingKeys: String, CodingKey {
-        case datetime
+        case datetime = "dt"
         case main
         case weather
         case clouds

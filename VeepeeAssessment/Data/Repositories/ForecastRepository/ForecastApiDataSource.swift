@@ -12,12 +12,19 @@ struct ForecastApiDataSource: ForecastDataSource {
     @Injected(\.urlSessionApiClient)
     private var apiClient: ApiClient
 
-    func getForecast(city: String, days: Int) async throws -> [DayForecastDto] {
+    func getForecast(city: String, days: Int) async throws -> [ForecastDto] {
         let cityQueryParam = "q=\(city)"
         let apiKeyQueryParam = "appid=\(ApiConstants.apiKey)"
-        let url = "\(ApiConstants.host)/\(ApiConstants.forecastPath)?\(cityQueryParam)&\(apiKeyQueryParam)"
+        let unitsQueryParam = "units=metric"
 
-        return try await apiClient.get(url: url)
+        let url = "\(ApiConstants.host)/\(ApiConstants.forecastPath)?"
+            + "\(cityQueryParam)"
+            + "&\(apiKeyQueryParam)"
+            + "&\(unitsQueryParam)"
+
+        let forecastDto: ForecastListDto = try await apiClient.get(url: url)
+
+        return forecastDto.list
     }
 
 }
