@@ -31,7 +31,7 @@
 		FE75B5ED29C46948004F8046 /* ApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EC29C46948004F8046 /* ApiClientError.swift */; };
 		FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */; };
 		FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F129C46A4C004F8046 /* HttpMethod.swift */; };
-		FE75B5F429C46B0D004F8046 /* DayForecastDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */; };
+		FE75B5F429C46B0D004F8046 /* ForecastDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F329C46B0D004F8046 /* ForecastDto.swift */; };
 		FE75B5FA29C46F38004F8046 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B5F929C46F38004F8046 /* Stinsen */; };
 		FE75B5FD29C46F55004F8046 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B5FC29C46F55004F8046 /* Factory */; };
 		FE75B60029C46F7B004F8046 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B5FF29C46F7B004F8046 /* SnapshotTesting */; };
@@ -41,7 +41,7 @@
 		FE75B60B29C470E4004F8046 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE75B60A29C470E4004F8046 /* OHHTTPStubsSwift */; };
 		FE75B60D29C47114004F8046 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B60C29C47114004F8046 /* Factory.swift */; };
 		FE75B61029C47146004F8046 /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B60F29C47146004F8046 /* ForecastRepository.swift */; };
-		FE75B61229C47206004F8046 /* DayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61129C47206004F8046 /* DayForecast.swift */; };
+		FE75B61229C47206004F8046 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61129C47206004F8046 /* Forecast.swift */; };
 		FE75B61629C472AD004F8046 /* ForecastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */; };
 		FE75B61829C47363004F8046 /* ForecastDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61729C47363004F8046 /* ForecastDataSource.swift */; };
 		FE75B61A29C473AC004F8046 /* ForecastApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */; };
@@ -54,6 +54,11 @@
 		FE75B62929C47F07004F8046 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62829C47F07004F8046 /* WindDto.swift */; };
 		FE75B62E29C4878C004F8046 /* GetForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62D29C4878C004F8046 /* GetForecastUseCase.swift */; };
 		FE75B63029C48816004F8046 /* DomainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62F29C48816004F8046 /* DomainConstants.swift */; };
+		FEE2BE1C29C9B48D006C4A93 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1B29C9B48D006C4A93 /* ViewConstants.swift */; };
+		FEE2BE1E29C9BA20006C4A93 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1D29C9BA20006C4A93 /* HomeModel.swift */; };
+		FEE2BE2029C9BB59006C4A93 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */; };
+		FEE2BE2729C9EC2D006C4A93 /* ForecastListDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */; };
+		FEF33F3429CA5A4D000F5445 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = FEF33F3329CA5A4D000F5445 /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,10 +110,10 @@
 		FE75B5EC29C46948004F8046 /* ApiClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientError.swift; sourceTree = "<group>"; };
 		FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionApiClient.swift; sourceTree = "<group>"; };
 		FE75B5F129C46A4C004F8046 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
-		FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastDto.swift; sourceTree = "<group>"; };
+		FE75B5F329C46B0D004F8046 /* ForecastDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDto.swift; sourceTree = "<group>"; };
 		FE75B60C29C47114004F8046 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		FE75B60F29C47146004F8046 /* ForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepository.swift; sourceTree = "<group>"; };
-		FE75B61129C47206004F8046 /* DayForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecast.swift; sourceTree = "<group>"; };
+		FE75B61129C47206004F8046 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositoryImpl.swift; sourceTree = "<group>"; };
 		FE75B61729C47363004F8046 /* ForecastDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDataSource.swift; sourceTree = "<group>"; };
 		FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastApiDataSource.swift; sourceTree = "<group>"; };
@@ -121,6 +126,11 @@
 		FE75B62829C47F07004F8046 /* WindDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WindDto.swift; path = /Users/yeniel/workspace/iOS_Archive/VeepeeAssessment/VeepeeAssessment/Data/Dto/WindDto.swift; sourceTree = "<absolute>"; };
 		FE75B62D29C4878C004F8046 /* GetForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCase.swift; sourceTree = "<group>"; };
 		FE75B62F29C48816004F8046 /* DomainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConstants.swift; sourceTree = "<group>"; };
+		FEE2BE1B29C9B48D006C4A93 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		FEE2BE1D29C9BA20006C4A93 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		FEE2BE2529C9E1C8006C4A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE75B5FD29C46F55004F8046 /* Factory in Frameworks */,
+				FEF33F3429CA5A4D000F5445 /* CachedAsyncImage in Frameworks */,
 				FB83168B7B492FCEF717F759 /* Pods_VeepeeAssessment.framework in Frameworks */,
 				FE75B5FA29C46F38004F8046 /* Stinsen in Frameworks */,
 			);
@@ -189,6 +200,8 @@
 		FE12C13729C4A5CE00102C52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FEE2BE1B29C9B48D006C4A93 /* ViewConstants.swift */,
+				FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -208,6 +221,7 @@
 			children = (
 				FE12C13D29C4ABA000102C52 /* HomeView.swift */,
 				FE12C14329C4AD3900102C52 /* HomeViewModel.swift */,
+				FEE2BE1D29C9BA20006C4A93 /* HomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -246,6 +260,7 @@
 		FE75B5AF29C4663E004F8046 /* VeepeeAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				FEE2BE2529C9E1C8006C4A93 /* Info.plist */,
 				FE75B60C29C47114004F8046 /* Factory.swift */,
 				FE75B5B929C46640004F8046 /* Persistence.swift */,
 				FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */,
@@ -332,10 +347,11 @@
 			isa = PBXGroup;
 			children = (
 				FE75B62829C47F07004F8046 /* WindDto.swift */,
-				FE75B5F329C46B0D004F8046 /* DayForecastDto.swift */,
+				FE75B5F329C46B0D004F8046 /* ForecastDto.swift */,
 				FE75B62229C47B94004F8046 /* DayForecastMainDto.swift */,
 				FE75B62429C47D78004F8046 /* WeatherDto.swift */,
 				FE75B62629C47DEF004F8046 /* CloudsDto.swift */,
+				FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -371,7 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				FE75B5EA29C468CF004F8046 /* DomainError.swift */,
-				FE75B61129C47206004F8046 /* DayForecast.swift */,
+				FE75B61129C47206004F8046 /* Forecast.swift */,
 				FE12C13229C4A0C400102C52 /* Wind.swift */,
 				FE12C13429C4A47800102C52 /* Weather.swift */,
 			);
@@ -415,6 +431,7 @@
 			packageProductDependencies = (
 				FE75B5F929C46F38004F8046 /* Stinsen */,
 				FE75B5FC29C46F55004F8046 /* Factory */,
+				FEF33F3329CA5A4D000F5445 /* CachedAsyncImage */,
 			);
 			productName = VeepeeAssessment;
 			productReference = FE75B5AD29C4663E004F8046 /* VeepeeAssessment.app */;
@@ -503,6 +520,7 @@
 				FE75B60129C47033004F8046 /* XCRemoteSwiftPackageReference "Quick" */,
 				FE75B60429C47082004F8046 /* XCRemoteSwiftPackageReference "Nimble" */,
 				FE75B60729C470E4004F8046 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				FEF33F3229CA5A4D000F5445 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = FE75B5AE29C4663E004F8046 /* Products */;
 			projectDirPath = "";
@@ -615,6 +633,7 @@
 				FE75B5ED29C46948004F8046 /* ApiClientError.swift in Sources */,
 				FE75B63029C48816004F8046 /* DomainConstants.swift in Sources */,
 				FE75B5EB29C468CF004F8046 /* DomainError.swift in Sources */,
+				FEE2BE1E29C9BA20006C4A93 /* HomeModel.swift in Sources */,
 				FE12C14429C4AD3900102C52 /* HomeViewModel.swift in Sources */,
 				FE75B61A29C473AC004F8046 /* ForecastApiDataSource.swift in Sources */,
 				FE75B62729C47DEF004F8046 /* CloudsDto.swift in Sources */,
@@ -624,12 +643,14 @@
 				FE75B62129C47955004F8046 /* LocalDtoMapper.swift in Sources */,
 				FE75B61D29C476BB004F8046 /* ApiConstants.swift in Sources */,
 				FE75B60D29C47114004F8046 /* Factory.swift in Sources */,
+				FEE2BE2029C9BB59006C4A93 /* DateUtils.swift in Sources */,
 				FE75B5BA29C46640004F8046 /* Persistence.swift in Sources */,
 				FE12C14029C4AC9E00102C52 /* AppCoordinator.swift in Sources */,
 				FE12C13E29C4ABA000102C52 /* HomeView.swift in Sources */,
 				FE75B62E29C4878C004F8046 /* GetForecastUseCase.swift in Sources */,
 				FE12C14629C4ADC700102C52 /* DetailView.swift in Sources */,
 				FE12C14829C4ADE700102C52 /* DetailViewModel.swift in Sources */,
+				FEE2BE2729C9EC2D006C4A93 /* ForecastListDto.swift in Sources */,
 				FE12C13529C4A47800102C52 /* Weather.swift in Sources */,
 				FE75B5BD29C46640004F8046 /* VeepeeAssessment.xcdatamodeld in Sources */,
 				FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */,
@@ -637,9 +658,10 @@
 				FE12C13A29C4A63F00102C52 /* ScreenStatus.swift in Sources */,
 				FE12C14229C4ACDA00102C52 /* MainCoordinator.swift in Sources */,
 				FE75B61029C47146004F8046 /* ForecastRepository.swift in Sources */,
-				FE75B61229C47206004F8046 /* DayForecast.swift in Sources */,
-				FE75B5F429C46B0D004F8046 /* DayForecastDto.swift in Sources */,
+				FE75B61229C47206004F8046 /* Forecast.swift in Sources */,
+				FE75B5F429C46B0D004F8046 /* ForecastDto.swift in Sources */,
 				FE75B62529C47D78004F8046 /* WeatherDto.swift in Sources */,
+				FEE2BE1C29C9B48D006C4A93 /* ViewConstants.swift in Sources */,
 				FE75B5EF29C46962004F8046 /* UrlSessionApiClient.swift in Sources */,
 				FE75B61629C472AD004F8046 /* ForecastRepositoryImpl.swift in Sources */,
 				FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */,
@@ -807,7 +829,8 @@
 				DEVELOPMENT_TEAM = SVW6HF2MTV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = VeepeeAssessment/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -837,7 +860,8 @@
 				DEVELOPMENT_TEAM = SVW6HF2MTV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = VeepeeAssessment/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1023,6 +1047,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		FEF33F3229CA5A4D000F5445 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1060,6 +1092,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FE75B60729C470E4004F8046 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
 			productName = OHHTTPStubsSwift;
+		};
+		FEF33F3329CA5A4D000F5445 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEF33F3229CA5A4D000F5445 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
