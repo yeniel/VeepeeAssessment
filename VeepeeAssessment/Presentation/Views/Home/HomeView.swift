@@ -8,6 +8,7 @@
 import Factory
 import Foundation
 import SwiftUI
+import CachedAsyncImage
 
 struct HomeView: View {
     @ObservedObject
@@ -19,14 +20,38 @@ struct HomeView: View {
 
     var body: some View {
         switch viewModel.status {
+        case .failed(let error):
+            Text(error.localizedDescription)
         case .loading:
-            VStack {
-                ProgressView()
+            ProgressView()
+            .task {
+                await viewModel.getForecast()
             }
         case .loaded:
-            VStack {
+            List {
+                ForEach(viewModel.forecast) { dayForecast in
+                    HStack {
+                        Text(dayForecast.datetime)
+                            .font(.body)
+                        Spacer()
+                        AsyncImage(url: URL(string: dayForecast.icon)) { image in
+                            image
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        Spacer()
+                        HStack {
+                            Text(dayForecast.minTemperature)
+                                .font(.callout)
+                                .foregroundColor(Color.gray)
+                            Text("-")
+                            Text(dayForecast.maxTemperature)
+                                .font(.body)
+                                .bold()
+                        }
+                    }
+                }
             }
-
         }
     }
 }

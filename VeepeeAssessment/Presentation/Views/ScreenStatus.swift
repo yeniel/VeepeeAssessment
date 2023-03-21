@@ -10,4 +10,5 @@ import Foundation
 enum ScreenStatus {
     case loading
     case loaded
+    case failed(DomainError)
 }
