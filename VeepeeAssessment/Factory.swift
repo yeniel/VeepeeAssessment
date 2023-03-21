@@ -37,7 +37,7 @@ extension Container {
 
     // MARK: Use Cases
 
-//    var loadProductsUseCase: Factory<LoadProductsUseCase> {
-//        Factory(self) { LoadProductsUseCaseImpl() }
-//    }
+    var getForecastUseCase: Factory<GetForecastUseCase> {
+        Factory(self) { GetForecastUseCaseImpl() }
+    }
 }
