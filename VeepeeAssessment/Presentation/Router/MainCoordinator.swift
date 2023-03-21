@@ -10,7 +10,7 @@ import Stinsen
 import SwiftUI
 
 protocol MainCoordinatorProtocol {
-    func routeToDetail()
+    func routeToDetail(forecastDatetime: Date)
 }
 
 final class MainCoordinator: MainCoordinatorProtocol, NavigationCoordinatable {
@@ -32,13 +32,13 @@ final class MainCoordinator: MainCoordinatorProtocol, NavigationCoordinatable {
     }
 
     @ViewBuilder
-    func makeDetailView() -> some View {
-        let viewModel = DetailViewModel()
+    func makeDetailView(forecastDatetime: Date) -> some View {
+        let viewModel = DetailViewModel(forecastDatetime: forecastDatetime)
 
         DetailView(viewModel: viewModel)
     }
 
-    func routeToDetail() {
-        route(to: \.detailView)
+    func routeToDetail(forecastDatetime: Date) {
+        route(to: \.detailView, forecastDatetime)
     }
 }

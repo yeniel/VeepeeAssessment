@@ -16,11 +16,13 @@ struct ForecastApiDataSource: ForecastDataSource {
         let cityQueryParam = "q=\(city)"
         let apiKeyQueryParam = "appid=\(ApiConstants.apiKey)"
         let unitsQueryParam = "units=metric"
+        let languageQueryParam = "lang=\(Locale.current.language.languageCode?.identifier ?? "en")"
 
         let url = "\(ApiConstants.host)/\(ApiConstants.forecastPath)?"
             + "\(cityQueryParam)"
             + "&\(apiKeyQueryParam)"
             + "&\(unitsQueryParam)"
+            + "&\(languageQueryParam)"
 
         let forecastDto: ForecastListDto = try await apiClient.get(url: url)
 

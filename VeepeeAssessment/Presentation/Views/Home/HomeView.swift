@@ -25,30 +25,34 @@ struct HomeView: View {
         case .loading:
             ProgressView()
             .task {
-                await viewModel.getForecast()
+                await viewModel.getForecastList()
             }
         case .loaded:
             List {
-                ForEach(viewModel.forecast) { dayForecast in
+                ForEach(viewModel.forecastList) { forecast in
                     HStack {
-                        Text(dayForecast.datetime)
+                        Text(forecast.datetime)
                             .font(.body)
                         Spacer()
-                        AsyncImage(url: URL(string: dayForecast.icon)) { image in
+                        CachedAsyncImage(url: URL(string: forecast.icon)) { image in
                             image
                         } placeholder: {
                             ProgressView()
                         }
                         Spacer()
                         HStack {
-                            Text(dayForecast.minTemperature)
-                                .font(.callout)
+                            Text(forecast.minTemperature)
+                                .font(.body)
                                 .foregroundColor(Color.gray)
                             Text("-")
-                            Text(dayForecast.maxTemperature)
+                            Text(forecast.maxTemperature)
                                 .font(.body)
                                 .bold()
                         }
+                    }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        viewModel.routeToDetail(forecastDatetime: forecast.id)
                     }
                 }
             }

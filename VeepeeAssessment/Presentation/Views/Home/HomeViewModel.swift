@@ -14,10 +14,10 @@ class HomeViewModel: ObservableObject {
     var status: ScreenStatus = .loading
 
     @Published
-    var forecast: [ForecastUI] = []
+    var forecastList: [ForecastUI] = []
 
-    @Injected(\.getForecastUseCase)
-    private var getForecastUseCase
+    @Injected(\.getForecastListUseCase)
+    private var getForecastListUseCase
 
     private let coordinator: MainCoordinatorProtocol
 
@@ -26,38 +26,38 @@ class HomeViewModel: ObservableObject {
     }
 
     @MainActor
-    func getForecast() async {
-        let result = await getForecastUseCase.execute(
+    func getForecastList() async {
+        let result = await getForecastListUseCase.execute(
             city: ViewConstants.defaultCity,
-            days: ViewConstants.homeForecastDays
+            days: ViewConstants.defaultDays
         )
 
         switch result {
-        case .success(let forecast):
-            self.forecast = forecast.map { domainModelToUIModel(domainModel: $0) }
+        case .success(let forecastList):
+            self.forecastList = forecastList.map { domainModelToUIModel(domainModel: $0) }
             self.status = .loaded
         case .failure(let error):
-            self.forecast = []
+            self.forecastList = []
             self.status = .failed(error)
         }
     }
 
+    func routeToDetail(forecastDatetime: Date) {
+        coordinator.routeToDetail(forecastDatetime: forecastDatetime)
+    }
+
     private func domainModelToUIModel(domainModel: Forecast) -> ForecastUI {
-        let datetime = domainModel.datetime.forecastFormat.capitalized
-        let minTemperature = String(Int(domainModel.temperatureMin)) + "º"
-        let maxTemperature = String(Int(domainModel.temperatureMax)) + "º"
+        let datetime = domainModel.datetime.homeForecastFormat
+        let minTemperature = domainModel.temperatureMin.temperatureFormat
+        let maxTemperature = domainModel.temperatureMax.temperatureFormat
         let icon = ViewConstants.imagesUrl + domainModel.weather.icon + ViewConstants.imageType
 
         return ForecastUI(
-            id: UUID(),
+            id: domainModel.datetime,
             datetime: datetime,
             minTemperature: minTemperature,
             maxTemperature: maxTemperature,
             icon: icon
         )
-    }
-
-    private func routeToDetail() {
-        coordinator.routeToDetail()
     }
 }

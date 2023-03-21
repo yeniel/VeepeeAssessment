@@ -8,8 +8,9 @@
 import Foundation
 
 enum ViewConstants {
-    static let homeForecastDays = 5
+    static let defaultDays = 5
     static let defaultCity = "Paris"
     static let imagesUrl =  "https://openweathermap.org/img/wn/"
     static let imageType = ".png"
+    static let imageType4x = "@4x.png"
 }

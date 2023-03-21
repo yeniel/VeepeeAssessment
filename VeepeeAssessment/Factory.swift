@@ -37,6 +37,10 @@ extension Container {
 
     // MARK: Use Cases
 
+    var getForecastListUseCase: Factory<GetForecastListUseCase> {
+        Factory(self) { GetForecastListUseCaseImpl() }
+    }
+
     var getForecastUseCase: Factory<GetForecastUseCase> {
         Factory(self) { GetForecastUseCaseImpl() }
     }

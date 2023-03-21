@@ -16,11 +16,19 @@ extension Date {
         return calendar.component(component, from: self)
     }
 
-    var forecastFormat: String {
+    var homeForecastFormat: String {
         let dateFormatter = DateFormatter()
 
         dateFormatter.dateFormat = "E HH:mm"
 
-        return dateFormatter.string(from: self)
+        return dateFormatter.string(from: self).capitalized
+    }
+
+    var detailForecastFormat: String {
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateFormat = "HH:mm, EEEE, MMM d"
+
+        return dateFormatter.string(from: self).capitalized
     }
 }

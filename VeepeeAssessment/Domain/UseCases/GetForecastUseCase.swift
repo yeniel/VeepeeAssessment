@@ -2,35 +2,36 @@
 //  GetForecastUseCase.swift
 //  VeepeeAssessment
 //
-//  Created by Yeniel Landestoy on 17/3/23.
+//  Created by Yeniel Landestoy on 21/3/23.
 //
 
 import Foundation
 import Factory
 
 protocol GetForecastUseCase {
-    func execute(city: String, days: Int) async -> Result<[Forecast], DomainError>
+    func execute(forecastDatetime: Date, city: String, days: Int) async -> Result<Forecast, DomainError>
 }
 
 struct GetForecastUseCaseImpl: GetForecastUseCase {
-    @Injected(\.forecastRepository)
-    private var forecastRepository
+    @Injected(\.getForecastListUseCase)
+    private var getForecastListUseCase
 
     func execute(
+        forecastDatetime: Date,
         city: String = DomainConstants.defaultCity,
         days: Int = DomainConstants.defaultDays
-    ) async -> Result<[Forecast], DomainError> {
-        do {
-            let dayForecastList = try await forecastRepository.getForecast(city: city, days: days)
+    ) async -> Result<Forecast, DomainError> {
+        let result = await getForecastListUseCase.execute(city: city, days: days)
 
-            return .success(dayForecastList)
-        } catch let error {
-            switch error {
-            case ApiClientError.decodingError:
-                return .failure(.decodingError)
-            default:
-                return .failure(.networkError)
+        switch result {
+        case .success(let forecastList):
+            guard let forecast = forecastList.first(where: { $0.datetime == forecastDatetime }) else {
+                return .failure(.unknown)
             }
+
+            return .success(forecast)
+        case .failure(let error):
+            return .failure(error)
         }
     }
 }

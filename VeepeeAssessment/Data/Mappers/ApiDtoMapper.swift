@@ -10,21 +10,18 @@ import Foundation
 struct ApiDtoMapper {
     func dtoToModel(dto: ForecastDto) -> Forecast {
         Forecast(
-            datetime: Date(timeIntervalSince1970: TimeInterval(dto.datetime)),
+            datetime: Date(timeIntervalSince1970: dto.datetime),
             temperature: dto.main.temperature,
             feelsLike: dto.main.feelsLike,
             temperatureMin: dto.main.temperatureMin,
             temperatureMax: dto.main.temperatureMax,
             pressure: dto.main.pressure,
-            seaLevel: dto.main.seaLevel,
-            groundLevel: dto.main.groundLevel,
             humidity: dto.main.humidity,
             weather: Weather(
                 id: dto.weather.first?.id ?? 0,
                 description: dto.weather.first?.description ?? "",
                 icon: dto.weather.first?.icon ?? ""
             ),
-            cloudiness: dto.clouds.cloudiness,
             wind: Wind(
                 speed: dto.wind.speed,
                 directionDegrees: dto.wind.directionDegrees,

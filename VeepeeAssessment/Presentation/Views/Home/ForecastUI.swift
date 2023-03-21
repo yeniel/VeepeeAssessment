@@ -8,7 +8,7 @@
 import Foundation
 
 struct ForecastUI: Identifiable {
-    var id: UUID
+    var id: Date
     let datetime: String
     let minTemperature: String
     let maxTemperature: String

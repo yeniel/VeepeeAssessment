@@ -14,11 +14,8 @@ struct Forecast {
     let temperatureMin: Double
     let temperatureMax: Double
     let pressure: Int
-    let seaLevel: Int
-    let groundLevel: Int
     let humidity: Int
     let weather: Weather
-    let cloudiness: Int
     let wind: Wind
     let visibility: Int
     let precipitationProbability: Double
