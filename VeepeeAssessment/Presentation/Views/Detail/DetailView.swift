@@ -48,12 +48,19 @@ struct DetailView: View {
                     Text(viewModel.forecast.weatherDescription)
                         .font(.body)
                     Divider()
-                    RowDetail(label: "Min Temperature", value: viewModel.forecast.temperatureMin)
-                    RowDetail(label: "Max Temperature", value: viewModel.forecast.temperatureMax)
-                    RowDetail(label: "Probability of Precipitation", value: viewModel.forecast.precipitationProbability)
-                    RowDetail(label: "Wind", value: viewModel.forecast.wind)
-                    RowDetail(label: "Humidity", value: viewModel.forecast.humidity)
-                    RowDetail(label: "Visibility", value: viewModel.forecast.visibility)
+                    Group {
+                        RowDetail(label: "Min Temperature", value: viewModel.forecast.temperatureMin)
+                        RowDetail(label: "Max Temperature", value: viewModel.forecast.temperatureMax)
+                        RowDetail(
+                            label: "Probability of Precipitation",
+                            value: viewModel.forecast.precipitationProbability
+                        )
+                        RowDetail(label: "Wind", value: viewModel.forecast.wind)
+                        RowDetail(label: "Humidity", value: viewModel.forecast.humidity)
+                        RowDetail(label: "Visibility", value: viewModel.forecast.visibility)
+                        RowDetail(label: "Pressure", value: viewModel.forecast.pressure)
+                    }
+                    Divider()
                 }
             }
             .padding()
