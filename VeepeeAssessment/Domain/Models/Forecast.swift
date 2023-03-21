@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DayForecast {
+struct Forecast {
     let datetime: Date
     let temperature: Double
     let feelsLike: Double

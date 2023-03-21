@@ -9,7 +9,7 @@ import Foundation
 import Factory
 
 protocol GetForecastUseCase {
-    func execute(city: String, days: Int) async -> Result<[DayForecast], DomainError>
+    func execute(city: String, days: Int) async -> Result<[Forecast], DomainError>
 }
 
 struct GetForecastUseCaseImpl: GetForecastUseCase {
@@ -19,7 +19,7 @@ struct GetForecastUseCaseImpl: GetForecastUseCase {
     func execute(
         city: String = DomainConstants.defaultCity,
         days: Int = DomainConstants.defaultDays
-    ) async -> Result<[DayForecast], DomainError> {
+    ) async -> Result<[Forecast], DomainError> {
         do {
             let dayForecastList = try await forecastRepository.getForecast(city: city, days: days)
 
