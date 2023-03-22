@@ -7,6 +7,7 @@
 
 import Foundation
 import Factory
+import CoreData
 
 extension Container {
     // MARK: ApiClient
@@ -23,6 +24,10 @@ extension Container {
 
     var forecastApiDataSource: Factory<ForecastDataSource> {
         Factory(self) { ForecastApiDataSource() }
+    }
+
+    var forecastLocalDataSource: Factory<ForecastDataSource> {
+        Factory(self) { ForecastLocalDataSource() }
     }
 
     // MARK: Mappers
@@ -43,5 +48,25 @@ extension Container {
 
     var getForecastUseCase: Factory<GetForecastUseCase> {
         Factory(self) { GetForecastUseCaseImpl() }
+    }
+
+    // MARK: Core Data
+
+    var container: Factory<NSPersistentContainer> {
+        Factory(self) { NSPersistentContainer(name: "VeepeeAssessment") }.singleton
+    }
+
+    // MARK: Other
+
+    var clock: Factory<Clock> {
+        Factory(self) { ClockImpl() }
+    }
+
+    var userDefaults: Factory<UserDefaults> {
+        Factory(self) { UserDefaults.standard }.singleton
+    }
+
+    var networkMonitor: Factory<NetworkMonitor> {
+        Factory(self) { NetworkMonitorImpl() }.singleton
     }
 }

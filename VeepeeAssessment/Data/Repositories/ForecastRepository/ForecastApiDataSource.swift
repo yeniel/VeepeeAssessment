@@ -12,7 +12,7 @@ struct ForecastApiDataSource: ForecastDataSource {
     @Injected(\.urlSessionApiClient)
     private var apiClient: ApiClient
 
-    func getForecast(city: String, days: Int) async throws -> [ForecastDto] {
+    func getForecastList(city: String, days: Int) async throws -> [ForecastDto] {
         let cityQueryParam = "q=\(city)"
         let apiKeyQueryParam = "appid=\(ApiConstants.apiKey)"
         let unitsQueryParam = "units=metric"
@@ -27,6 +27,10 @@ struct ForecastApiDataSource: ForecastDataSource {
         let forecastDto: ForecastListDto = try await apiClient.get(url: url)
 
         return forecastDto.list
+    }
+
+    func saveForecastList(forecastList: [ForecastDto]) {
+        assert(false, "Not Implemented ForecastApiDataSource.saveForecastList")
     }
 
 }

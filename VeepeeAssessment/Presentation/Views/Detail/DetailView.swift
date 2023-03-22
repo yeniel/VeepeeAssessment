@@ -38,6 +38,7 @@ struct DetailView: View {
                         } placeholder: {
                             ProgressView()
                         }
+                        .frame(width: 200, height: 200)
                         VStack {
                             Text(viewModel.forecast.temperature)
                                 .font(.largeTitle)

@@ -8,5 +8,6 @@
 import Foundation
 
 protocol ForecastDataSource {
-    func getForecast(city: String, days: Int) async throws -> [ForecastDto]
+    func getForecastList(city: String, days: Int) async throws -> [ForecastDto]
+    func saveForecastList(forecastList: [ForecastDto])
 }

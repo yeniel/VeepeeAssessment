@@ -18,7 +18,6 @@ struct ApiDtoMapper {
             pressure: dto.main.pressure,
             humidity: dto.main.humidity,
             weather: Weather(
-                id: dto.weather.first?.id ?? 0,
                 description: dto.weather.first?.description ?? "",
                 icon: dto.weather.first?.icon ?? ""
             ),

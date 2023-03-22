@@ -12,11 +12,44 @@ struct ForecastRepositoryImpl: ForecastRepository {
     @Injected(\.forecastApiDataSource)
     private var apiDataSource: ForecastDataSource
 
-    @Injected(\.apiDtoMapper)
-    private var dtoMapper: ApiDtoMapper
+    @Injected(\.forecastLocalDataSource)
+    private var localDataSource: ForecastDataSource
 
+    @Injected(\.apiDtoMapper)
+    private var mapper: ApiDtoMapper
+
+    @Injected(\.clock)
+    private var clock: Clock
+
+    @Injected(\.userDefaults)
+    private var userDefaults: UserDefaults
+
+    @Injected(\.networkMonitor)
+    var networkMonitor: NetworkMonitor
+
+    private var isCacheExpired: Bool {
+        let now = Int(clock.now.timeIntervalSince1970.rounded())
+        let cacheDate = userDefaults.forecastCacheExpiry + ApiConstants.cacheExpiryInSeconds
+
+        return cacheDate < now
+    }
     func getForecast(city: String, days: Int) async throws -> [Forecast] {
-        try await apiDataSource.getForecast(city: city, days: days)
-            .map { dtoMapper.dtoToModel(dto: $0) }
+        var dataSource: ForecastDataSource
+
+        if isCacheExpired, networkMonitor.isConnected {
+            dataSource = apiDataSource
+        } else {
+            dataSource = localDataSource
+        }
+
+        let forecastDtoList = try await dataSource.getForecastList(city: city, days: days)
+        let forecastList = forecastDtoList.map { mapper.dtoToModel(dto: $0) }
+
+        if isCacheExpired, dataSource is ForecastApiDataSource {
+            localDataSource.saveForecastList(forecastList: forecastDtoList)
+            userDefaults.forecastCacheExpiry = Int(clock.now.timeIntervalSince1970)
+        }
+
+        return forecastList
     }
 }
