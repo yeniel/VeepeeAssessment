@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Weather {
+struct Weather: Equatable {
     let description: String
     let icon: String
 }

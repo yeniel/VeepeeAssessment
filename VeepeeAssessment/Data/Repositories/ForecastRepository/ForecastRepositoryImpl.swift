@@ -33,6 +33,7 @@ struct ForecastRepositoryImpl: ForecastRepository {
 
         return cacheDate < now
     }
+
     func getForecast(city: String, days: Int) async throws -> [Forecast] {
         var dataSource: ForecastDataSource
 
@@ -45,7 +46,7 @@ struct ForecastRepositoryImpl: ForecastRepository {
         let forecastDtoList = try await dataSource.getForecastList(city: city, days: days)
         let forecastList = forecastDtoList.map { mapper.dtoToModel(dto: $0) }
 
-        if isCacheExpired, dataSource is ForecastApiDataSource {
+        if isCacheExpired {
             localDataSource.saveForecastList(forecastList: forecastDtoList)
             userDefaults.forecastCacheExpiry = Int(clock.now.timeIntervalSince1970)
         }

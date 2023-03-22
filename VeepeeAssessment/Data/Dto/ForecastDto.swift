@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ForecastDto: Codable {
+struct ForecastDto: Codable, Equatable {
     let datetime: Double
     let main: ForecastMainDto
     let weather: [WeatherDto]

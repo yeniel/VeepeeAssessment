@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Forecast {
+struct Forecast: Equatable {
     let datetime: Date
     let temperature: Double
     let feelsLike: Double

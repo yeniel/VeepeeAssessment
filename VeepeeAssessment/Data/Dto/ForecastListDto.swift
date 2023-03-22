@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ForecastListDto: Codable {
+struct ForecastListDto: Codable, Equatable {
     let list: [ForecastDto]
 }

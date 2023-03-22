@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ForecastMainDto: Codable {
+struct ForecastMainDto: Codable, Equatable {
     let temperature: Double
     let feelsLike: Double
     let temperatureMin: Double

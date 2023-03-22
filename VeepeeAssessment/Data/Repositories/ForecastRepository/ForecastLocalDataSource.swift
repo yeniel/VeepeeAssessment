@@ -29,6 +29,8 @@ struct ForecastLocalDataSource: ForecastDataSource {
 
     func saveForecastList(forecastList: [ForecastDto]) {
         container.performBackgroundTask { context in
+            context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+
             forecastList.forEach { forecastDto in
                 let forecastCD = ForecastCD(context: context)
                 let mainCD = mapper.dtoToCoreData(dto: forecastDto.main, context: context)

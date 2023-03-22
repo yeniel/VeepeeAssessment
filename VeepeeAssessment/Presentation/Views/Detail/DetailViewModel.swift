@@ -17,7 +17,7 @@ class DetailViewModel: ObservableObject {
     var forecast: ForecastDetailUI = ForecastDetailUI()
 
     @Injected(\.getForecastUseCase)
-    private var getForecastUseCase
+    private var getForecastUseCase: GetForecastUseCase
 
     private let forecastDatetime: Date
 

@@ -14,7 +14,7 @@ protocol GetForecastUseCase {
 
 struct GetForecastUseCaseImpl: GetForecastUseCase {
     @Injected(\.getForecastListUseCase)
-    private var getForecastListUseCase
+    private var getForecastListUseCase: GetForecastListUseCase
 
     func execute(
         forecastDatetime: Date,

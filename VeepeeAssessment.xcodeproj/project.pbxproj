@@ -19,11 +19,58 @@
 		FE12C14629C4ADC700102C52 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14529C4ADC700102C52 /* DetailView.swift */; };
 		FE12C14829C4ADE700102C52 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14729C4ADE700102C52 /* DetailViewModel.swift */; };
 		FE4381C029CB731700CE0439 /* ObjectMother.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4381BF29CB731700CE0439 /* ObjectMother.swift */; };
+		FE4381C129CB73D000CE0439 /* UrlSessionApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */; };
+		FE4381C229CB73D000CE0439 /* ClockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB849429CB300700797722 /* ClockImpl.swift */; };
+		FE4381C329CB73D000CE0439 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5E729C4689F004F8046 /* ApiClient.swift */; };
+		FE4381C429CB73D000CE0439 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F129C46A4C004F8046 /* HttpMethod.swift */; };
+		FE4381C529CB73D000CE0439 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848E29CB256B00797722 /* UserDefaults.swift */; };
+		FE4381C629CB73D000CE0439 /* ApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EC29C46948004F8046 /* ApiClientError.swift */; };
+		FE4381C729CB73D000CE0439 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61C29C476BB004F8046 /* ApiConstants.swift */; };
+		FE4381C829CB73D600CE0439 /* ForecastListDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */; };
+		FE4381C929CB73D600CE0439 /* ForecastDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F329C46B0D004F8046 /* ForecastDto.swift */; };
+		FE4381CA29CB73D600CE0439 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62829C47F07004F8046 /* WindDto.swift */; };
+		FE4381CB29CB73D600CE0439 /* WeatherDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62429C47D78004F8046 /* WeatherDto.swift */; };
+		FE4381CC29CB73D600CE0439 /* ForecastMainDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62229C47B94004F8046 /* ForecastMainDto.swift */; };
+		FE4381CD29CB73DA00CE0439 /* LocalDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62029C47955004F8046 /* LocalDtoMapper.swift */; };
+		FE4381CE29CB73DA00CE0439 /* ApiDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61E29C478ED004F8046 /* ApiDtoMapper.swift */; };
+		FE4381CF29CB73DE00CE0439 /* ForecastDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61729C47363004F8046 /* ForecastDataSource.swift */; };
+		FE4381D029CB73DE00CE0439 /* ForecastApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */; };
+		FE4381D129CB73DE00CE0439 /* ForecastLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848429CB0F1D00797722 /* ForecastLocalDataSource.swift */; };
+		FE4381D229CB73DE00CE0439 /* ForecastRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */; };
+		FE4381D329CB73E100CE0439 /* GetForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3529CA5EFC000F5445 /* GetForecastUseCase.swift */; };
+		FE4381D429CB73E100CE0439 /* GetForecastListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62D29C4878C004F8046 /* GetForecastListUseCase.swift */; };
+		FE4381D529CB73E600CE0439 /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B60F29C47146004F8046 /* ForecastRepository.swift */; };
+		FE4381D629CB73EB00CE0439 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848C29CB235400797722 /* Clock.swift */; };
+		FE4381D729CB73EB00CE0439 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13229C4A0C400102C52 /* Wind.swift */; };
+		FE4381D829CB73EB00CE0439 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB849029CB2F3A00797722 /* NetworkMonitor.swift */; };
+		FE4381D929CB73EB00CE0439 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13429C4A47800102C52 /* Weather.swift */; };
+		FE4381DA29CB73EB00CE0439 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EA29C468CF004F8046 /* DomainError.swift */; };
+		FE4381DB29CB73EB00CE0439 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61129C47206004F8046 /* Forecast.swift */; };
+		FE4381DC29CB73EE00CE0439 /* DomainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62F29C48816004F8046 /* DomainConstants.swift */; };
+		FE4381DD29CB73F600CE0439 /* ForecastDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3729CA6224000F5445 /* ForecastDetailUI.swift */; };
+		FE4381DE29CB73F600CE0439 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14529C4ADC700102C52 /* DetailView.swift */; };
+		FE4381DF29CB73F600CE0439 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14729C4ADE700102C52 /* DetailViewModel.swift */; };
+		FE4381E029CB73FA00CE0439 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13D29C4ABA000102C52 /* HomeView.swift */; };
+		FE4381E129CB73FA00CE0439 /* ForecastUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1D29C9BA20006C4A93 /* ForecastUI.swift */; };
+		FE4381E229CB73FA00CE0439 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14329C4AD3900102C52 /* HomeViewModel.swift */; };
+		FE4381E329CB73FC00CE0439 /* ScreenStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13929C4A63F00102C52 /* ScreenStatus.swift */; };
+		FE4381E429CB740000CE0439 /* NetworkMonitorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB849229CB2FCD00797722 /* NetworkMonitorImpl.swift */; };
+		FE4381E529CB740000CE0439 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1B29C9B48D006C4A93 /* ViewConstants.swift */; };
+		FE4381E629CB740000CE0439 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */; };
+		FE4381E729CB740000CE0439 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3929CA68C7000F5445 /* Utils.swift */; };
+		FE4381E829CB740400CE0439 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14129C4ACDA00102C52 /* MainCoordinator.swift */; };
+		FE4381E929CB740400CE0439 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13F29C4AC9E00102C52 /* AppCoordinator.swift */; };
+		FE4381EB29CB741A00CE0439 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4381EA29CB741A00CE0439 /* Mocks.swift */; };
+		FE4381ED29CB758A00CE0439 /* UrlSessionApiClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4381EC29CB758A00CE0439 /* UrlSessionApiClientSpec.swift */; };
+		FE4381EF29CB77B800CE0439 /* forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = FE4381EE29CB77B800CE0439 /* forecast.json */; };
+		FE4381F129CBAE0000CE0439 /* ForecastRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4381F029CBAE0000CE0439 /* ForecastRepositorySpec.swift */; };
+		FE4381F229CBB21C00CE0439 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B60C29C47114004F8046 /* Factory.swift */; };
+		FE4381F329CBB23600CE0439 /* VeepeeAssessment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5BB29C46640004F8046 /* VeepeeAssessment.xcdatamodeld */; };
+		FE4381F529CBC4DC00CE0439 /* ForecastApiDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4381F429CBC4DC00CE0439 /* ForecastApiDataSourceSpec.swift */; };
 		FE75B5B129C4663E004F8046 /* VeepeeAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */; };
 		FE75B5B529C46640004F8046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75B5B429C46640004F8046 /* Assets.xcassets */; };
 		FE75B5B829C46640004F8046 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE75B5B729C46640004F8046 /* Preview Assets.xcassets */; };
 		FE75B5BD29C46640004F8046 /* VeepeeAssessment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5BB29C46640004F8046 /* VeepeeAssessment.xcdatamodeld */; };
-		FE75B5C729C46640004F8046 /* VeepeeAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5C629C46640004F8046 /* VeepeeAssessmentTests.swift */; };
 		FE75B5E829C4689F004F8046 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5E729C4689F004F8046 /* ApiClient.swift */; };
 		FE75B5EB29C468CF004F8046 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EA29C468CF004F8046 /* DomainError.swift */; };
 		FE75B5ED29C46948004F8046 /* ApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5EC29C46948004F8046 /* ApiClientError.swift */; };
@@ -94,13 +141,17 @@
 		FE12C14529C4ADC700102C52 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		FE12C14729C4ADE700102C52 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		FE4381BF29CB731700CE0439 /* ObjectMother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMother.swift; sourceTree = "<group>"; };
+		FE4381EA29CB741A00CE0439 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		FE4381EC29CB758A00CE0439 /* UrlSessionApiClientSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlSessionApiClientSpec.swift; sourceTree = "<group>"; };
+		FE4381EE29CB77B800CE0439 /* forecast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = forecast.json; sourceTree = "<group>"; };
+		FE4381F029CBAE0000CE0439 /* ForecastRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepositorySpec.swift; sourceTree = "<group>"; };
+		FE4381F429CBC4DC00CE0439 /* ForecastApiDataSourceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastApiDataSourceSpec.swift; sourceTree = "<group>"; };
 		FE75B5AD29C4663E004F8046 /* VeepeeAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeepeeAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE75B5B029C4663E004F8046 /* VeepeeAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentApp.swift; sourceTree = "<group>"; };
 		FE75B5B429C46640004F8046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE75B5B729C46640004F8046 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE75B5BC29C46640004F8046 /* VeepeeAssessment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VeepeeAssessment.xcdatamodel; sourceTree = "<group>"; };
 		FE75B5C229C46640004F8046 /* VeepeeAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeepeeAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE75B5C629C46640004F8046 /* VeepeeAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeepeeAssessmentTests.swift; sourceTree = "<group>"; };
 		FE75B5E729C4689F004F8046 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		FE75B5EA29C468CF004F8046 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		FE75B5EC29C46948004F8046 /* ApiClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientError.swift; sourceTree = "<group>"; };
@@ -238,6 +289,10 @@
 		FE4381BB29CB72EC00CE0439 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FE4381EC29CB758A00CE0439 /* UrlSessionApiClientSpec.swift */,
+				FE4381EE29CB77B800CE0439 /* forecast.json */,
+				FE4381F029CBAE0000CE0439 /* ForecastRepositorySpec.swift */,
+				FE4381F429CBC4DC00CE0439 /* ForecastApiDataSourceSpec.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -260,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				FE4381BF29CB731700CE0439 /* ObjectMother.swift */,
+				FE4381EA29CB741A00CE0439 /* Mocks.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -310,11 +366,10 @@
 		FE75B5C529C46640004F8046 /* VeepeeAssessmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				FE4381BE29CB72F900CE0439 /* Utils */,
-				FE4381BD29CB72F300CE0439 /* Presentation */,
-				FE4381BC29CB72EF00CE0439 /* Domain */,
 				FE4381BB29CB72EC00CE0439 /* Data */,
-				FE75B5C629C46640004F8046 /* VeepeeAssessmentTests.swift */,
+				FE4381BC29CB72EF00CE0439 /* Domain */,
+				FE4381BD29CB72F300CE0439 /* Presentation */,
+				FE4381BE29CB72F900CE0439 /* Utils */,
 			);
 			path = VeepeeAssessmentTests;
 			sourceTree = "<group>";
@@ -566,6 +621,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4381EF29CB77B800CE0439 /* forecast.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,8 +749,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE75B5C729C46640004F8046 /* VeepeeAssessmentTests.swift in Sources */,
+				FE4381D129CB73DE00CE0439 /* ForecastLocalDataSource.swift in Sources */,
+				FE4381E829CB740400CE0439 /* MainCoordinator.swift in Sources */,
+				FE4381D729CB73EB00CE0439 /* Wind.swift in Sources */,
+				FE4381ED29CB758A00CE0439 /* UrlSessionApiClientSpec.swift in Sources */,
+				FE4381C229CB73D000CE0439 /* ClockImpl.swift in Sources */,
+				FE4381CB29CB73D600CE0439 /* WeatherDto.swift in Sources */,
+				FE4381E929CB740400CE0439 /* AppCoordinator.swift in Sources */,
+				FE4381CA29CB73D600CE0439 /* WindDto.swift in Sources */,
+				FE4381E029CB73FA00CE0439 /* HomeView.swift in Sources */,
+				FE4381E529CB740000CE0439 /* ViewConstants.swift in Sources */,
+				FE4381CE29CB73DA00CE0439 /* ApiDtoMapper.swift in Sources */,
+				FE4381DD29CB73F600CE0439 /* ForecastDetailUI.swift in Sources */,
+				FE4381C629CB73D000CE0439 /* ApiClientError.swift in Sources */,
 				FE4381C029CB731700CE0439 /* ObjectMother.swift in Sources */,
+				FE4381D829CB73EB00CE0439 /* NetworkMonitor.swift in Sources */,
+				FE4381DB29CB73EB00CE0439 /* Forecast.swift in Sources */,
+				FE4381EB29CB741A00CE0439 /* Mocks.swift in Sources */,
+				FE4381D329CB73E100CE0439 /* GetForecastUseCase.swift in Sources */,
+				FE4381E729CB740000CE0439 /* Utils.swift in Sources */,
+				FE4381D229CB73DE00CE0439 /* ForecastRepositoryImpl.swift in Sources */,
+				FE4381C129CB73D000CE0439 /* UrlSessionApiClient.swift in Sources */,
+				FE4381E629CB740000CE0439 /* DateUtils.swift in Sources */,
+				FE4381D929CB73EB00CE0439 /* Weather.swift in Sources */,
+				FE4381D029CB73DE00CE0439 /* ForecastApiDataSource.swift in Sources */,
+				FE4381F329CBB23600CE0439 /* VeepeeAssessment.xcdatamodeld in Sources */,
+				FE4381F129CBAE0000CE0439 /* ForecastRepositorySpec.swift in Sources */,
+				FE4381D529CB73E600CE0439 /* ForecastRepository.swift in Sources */,
+				FE4381E229CB73FA00CE0439 /* HomeViewModel.swift in Sources */,
+				FE4381CD29CB73DA00CE0439 /* LocalDtoMapper.swift in Sources */,
+				FE4381E429CB740000CE0439 /* NetworkMonitorImpl.swift in Sources */,
+				FE4381CC29CB73D600CE0439 /* ForecastMainDto.swift in Sources */,
+				FE4381C729CB73D000CE0439 /* ApiConstants.swift in Sources */,
+				FE4381C429CB73D000CE0439 /* HttpMethod.swift in Sources */,
+				FE4381F529CBC4DC00CE0439 /* ForecastApiDataSourceSpec.swift in Sources */,
+				FE4381DC29CB73EE00CE0439 /* DomainConstants.swift in Sources */,
+				FE4381CF29CB73DE00CE0439 /* ForecastDataSource.swift in Sources */,
+				FE4381D629CB73EB00CE0439 /* Clock.swift in Sources */,
+				FE4381E129CB73FA00CE0439 /* ForecastUI.swift in Sources */,
+				FE4381DE29CB73F600CE0439 /* DetailView.swift in Sources */,
+				FE4381C929CB73D600CE0439 /* ForecastDto.swift in Sources */,
+				FE4381F229CBB21C00CE0439 /* Factory.swift in Sources */,
+				FE4381C529CB73D000CE0439 /* UserDefaults.swift in Sources */,
+				FE4381D429CB73E100CE0439 /* GetForecastListUseCase.swift in Sources */,
+				FE4381C829CB73D600CE0439 /* ForecastListDto.swift in Sources */,
+				FE4381DA29CB73EB00CE0439 /* DomainError.swift in Sources */,
+				FE4381DF29CB73F600CE0439 /* DetailViewModel.swift in Sources */,
+				FE4381E329CB73FC00CE0439 /* ScreenStatus.swift in Sources */,
+				FE4381C329CB73D000CE0439 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,16 +1090,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
-				kind = exactVersion;
-				version = 5.0.1;
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
 			};
 		};
 		FE75B60429C47082004F8046 /* XCRemoteSwiftPackageReference "Nimble" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
 			requirement = {
-				kind = exactVersion;
-				version = 10.0.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.1;
 			};
 		};
 		FE75B60729C470E4004F8046 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
