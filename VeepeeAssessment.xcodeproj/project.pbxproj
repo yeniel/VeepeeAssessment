@@ -100,6 +100,7 @@
 		FEDA07B229CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA07B129CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift */; };
 		FEDA07B429CCF161008B1D41 /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = FEDA07B329CCF161008B1D41 /* wrong.json */; };
 		FEDA07BA29CD119F008B1D41 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA07B929CD119F008B1D41 /* WindDto.swift */; };
+		FEDA07BB29CD145E008B1D41 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA07B929CD119F008B1D41 /* WindDto.swift */; };
 		FEDB848529CB0F1D00797722 /* ForecastLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848429CB0F1D00797722 /* ForecastLocalDataSource.swift */; };
 		FEDB848D29CB235400797722 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848C29CB235400797722 /* Clock.swift */; };
 		FEDB848F29CB256B00797722 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848E29CB256B00797722 /* UserDefaults.swift */; };
@@ -831,6 +832,7 @@
 				FE4381CB29CB73D600CE0439 /* WeatherDto.swift in Sources */,
 				FE4381E929CB740400CE0439 /* AppCoordinator.swift in Sources */,
 				FE4381E029CB73FA00CE0439 /* HomeView.swift in Sources */,
+				FEDA07BB29CD145E008B1D41 /* WindDto.swift in Sources */,
 				FEE4ECA529CC750000F85EFD /* DetailViewModelSpec.swift in Sources */,
 				FE4381E529CB740000CE0439 /* ViewConstants.swift in Sources */,
 				FE4381CE29CB73DA00CE0439 /* ApiDtoMapper.swift in Sources */,
