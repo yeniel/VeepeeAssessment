@@ -56,14 +56,14 @@ class DetailViewModelSpec: QuickSpec {
                     await expect(viewModel.forecast).toEventually(equal(ForecastDetailUI()))
                 }
 
-                it("THEN publishs failed status, network error") {
+                it("THEN publishs failed status with message 'Error: Try again later'") {
                     setupMocks(error: .networkError)
 
                     let viewModel = DetailViewModel(forecastDatetime: ObjectMother.forecastFromApi.datetime)
 
                     await viewModel.getForecast()
 
-                    await expect(viewModel.status).toEventually(equal(.failed(.networkError)))
+                    await expect(viewModel.status).toEventually(equal(.failed("Error: Try again later")))
                 }
             }
         }

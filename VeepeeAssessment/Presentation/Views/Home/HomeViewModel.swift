@@ -37,8 +37,9 @@ class HomeViewModel: ObservableObject {
             self.forecastList = forecastList.map { domainModelToUIModel(domainModel: $0) }
             self.status = .loaded
         case .failure(let error):
+            print(error)
             self.forecastList = []
-            self.status = .failed(error)
+            self.status = .failed("Error: Try again later")
         }
     }
 

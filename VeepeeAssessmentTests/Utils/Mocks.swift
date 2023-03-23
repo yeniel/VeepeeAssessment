@@ -118,4 +118,19 @@ struct MockGetForecastListUseCase: GetForecastListUseCase {
     }
 }
 
+struct MockGetForecastUseCase: GetForecastUseCase {
+    var error: DomainError?
+
+    init(error: DomainError? = nil) {
+        self.error = error
+    }
+
+    func execute(forecastDatetime: Date, city: String, days: Int) async -> Result<Forecast, DomainError> {
+        if let error = error {
+            return .failure(error)
+        }
+
+        return .success(ObjectMother.forecastFromApi)
+    }
+}
 // swiftlint:enable force_cast

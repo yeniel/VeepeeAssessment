@@ -16,8 +16,4 @@ extension UserDefaults {
             set(newValue, forKey: "forecastCacheExpiry")
         }
     }
-
-    func resetCaches() {
-        forecastCacheExpiry = 0
-    }
 }

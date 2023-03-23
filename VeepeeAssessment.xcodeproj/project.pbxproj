@@ -98,6 +98,9 @@
 		FE75B62929C47F07004F8046 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62829C47F07004F8046 /* WindDto.swift */; };
 		FE75B62E29C4878C004F8046 /* GetForecastListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62D29C4878C004F8046 /* GetForecastListUseCase.swift */; };
 		FE75B63029C48816004F8046 /* DomainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62F29C48816004F8046 /* DomainConstants.swift */; };
+		FEDA07B029CCEBF3008B1D41 /* DetailViewSnapshotSuccessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA07AF29CCEBF3008B1D41 /* DetailViewSnapshotSuccessSpec.swift */; };
+		FEDA07B229CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA07B129CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift */; };
+		FEDA07B429CCF161008B1D41 /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = FEDA07B329CCF161008B1D41 /* wrong.json */; };
 		FEDB848529CB0F1D00797722 /* ForecastLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848429CB0F1D00797722 /* ForecastLocalDataSource.swift */; };
 		FEDB848D29CB235400797722 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848C29CB235400797722 /* Clock.swift */; };
 		FEDB848F29CB256B00797722 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848E29CB256B00797722 /* UserDefaults.swift */; };
@@ -180,6 +183,9 @@
 		FE75B62829C47F07004F8046 /* WindDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WindDto.swift; path = /Users/yeniel/workspace/iOS_Archive/VeepeeAssessment/VeepeeAssessment/Data/Dto/WindDto.swift; sourceTree = "<absolute>"; };
 		FE75B62D29C4878C004F8046 /* GetForecastListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastListUseCase.swift; sourceTree = "<group>"; };
 		FE75B62F29C48816004F8046 /* DomainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConstants.swift; sourceTree = "<group>"; };
+		FEDA07AF29CCEBF3008B1D41 /* DetailViewSnapshotSuccessSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewSnapshotSuccessSpec.swift; sourceTree = "<group>"; };
+		FEDA07B129CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewSnapshotFailedSpec.swift; sourceTree = "<group>"; };
+		FEDA07B329CCF161008B1D41 /* wrong.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wrong.json; sourceTree = "<group>"; };
 		FEDB848429CB0F1D00797722 /* ForecastLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastLocalDataSource.swift; sourceTree = "<group>"; };
 		FEDB848C29CB235400797722 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		FEDB848E29CB256B00797722 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -309,6 +315,7 @@
 				FE4381EE29CB77B800CE0439 /* forecast.json */,
 				FE4381F029CBAE0000CE0439 /* ForecastRepositorySpec.swift */,
 				FE4381F429CBC4DC00CE0439 /* ForecastApiDataSourceSpec.swift */,
+				FEDA07B329CCF161008B1D41 /* wrong.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -511,6 +518,24 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		FEDA07AD29CCEBC6008B1D41 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FEE4ECA629CC7A4500F85EFD /* HomeViewSnapshotSuccessSpec.swift */,
+				FEE4ECA829CC998900F85EFD /* HomeViewSnapshotFailed.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FEDA07AE29CCEBDB008B1D41 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FEDA07AF29CCEBF3008B1D41 /* DetailViewSnapshotSuccessSpec.swift */,
+				FEDA07B129CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		FEDB848329CB024E00797722 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,8 +574,8 @@
 		FEE4EC9D29CC657500F85EFD /* Snapshots */ = {
 			isa = PBXGroup;
 			children = (
-				FEE4ECA629CC7A4500F85EFD /* HomeViewSnapshotSuccessSpec.swift */,
-				FEE4ECA829CC998900F85EFD /* HomeViewSnapshotFailed.swift */,
+				FEDA07AE29CCEBDB008B1D41 /* Detail */,
+				FEDA07AD29CCEBC6008B1D41 /* Home */,
 			);
 			path = Snapshots;
 			sourceTree = "<group>";
@@ -670,6 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE4381EF29CB77B800CE0439 /* forecast.json in Resources */,
+				FEDA07B429CCF161008B1D41 /* wrong.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +857,7 @@
 				FE4381CD29CB73DA00CE0439 /* LocalDtoMapper.swift in Sources */,
 				FE4381E429CB740000CE0439 /* NetworkMonitorImpl.swift in Sources */,
 				FE4381CC29CB73D600CE0439 /* ForecastMainDto.swift in Sources */,
+				FEDA07B029CCEBF3008B1D41 /* DetailViewSnapshotSuccessSpec.swift in Sources */,
 				FE4381C729CB73D000CE0439 /* ApiConstants.swift in Sources */,
 				FE4381C429CB73D000CE0439 /* HttpMethod.swift in Sources */,
 				FE4381F529CBC4DC00CE0439 /* ForecastApiDataSourceSpec.swift in Sources */,
@@ -849,6 +876,7 @@
 				FEE4EC9A29CC62A800F85EFD /* GetForecastUseCasSpec.swift in Sources */,
 				FEE4ECA329CC6B2300F85EFD /* HomeViewModelSpec.swift in Sources */,
 				FEE4EC9829CC552F00F85EFD /* GetForecastListUseCaseSpec.swift in Sources */,
+				FEDA07B229CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift in Sources */,
 				FE4381DA29CB73EB00CE0439 /* DomainError.swift in Sources */,
 				FE4381DF29CB73F600CE0439 /* DetailViewModel.swift in Sources */,
 				FE4381E329CB73FC00CE0439 /* ScreenStatus.swift in Sources */,

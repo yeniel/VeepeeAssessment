@@ -21,7 +21,8 @@ struct HomeView: View {
     var body: some View {
         switch viewModel.status {
         case .failed(let error):
-            Text(error.localizedDescription)
+            Text(error)
+                .foregroundColor(Color.red)
         case .loading:
             ProgressView()
             .task {

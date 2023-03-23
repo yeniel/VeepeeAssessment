@@ -10,5 +10,5 @@ import Foundation
 enum ScreenStatus: Equatable {
     case loading
     case loaded
-    case failed(DomainError)
+    case failed(String)
 }

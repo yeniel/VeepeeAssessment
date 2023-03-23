@@ -30,7 +30,6 @@ struct UrlSessionApiClient: ApiClient {
 
             return dto
         } catch {
-            print(error)
             throw ApiClientError.decodingError
         }
     }

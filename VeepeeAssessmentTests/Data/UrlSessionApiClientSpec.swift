@@ -59,16 +59,12 @@ class UrlSessionApiClientSpec: QuickSpec {
 
             context("WHEN request and receive an error") {
                 it("THEN returns a ApiClientError.requestError error") {
-                    stub(condition: isHost("api.openweathermap.org")
-                         && isPath("/data/2.5/forecast")
-                         && isMethodGET()
-                    ) { _ in
-                        let notConnectedError = NSError(
-                            domain: NSURLErrorDomain,
-                            code: URLError.notConnectedToInternet.rawValue
-                        )
-                        return HTTPStubsResponse(error: notConnectedError)
-                    }
+                    let notConnectedError = NSError(
+                        domain: NSURLErrorDomain,
+                        code: URLError.notConnectedToInternet.rawValue
+                    )
+
+                    setupStubs(error: notConnectedError)
 
                     let apiClient = UrlSessionApiClient()
 
@@ -85,12 +81,7 @@ class UrlSessionApiClientSpec: QuickSpec {
 
             context("WHEN request and receive a status code diff than 200") {
                 it("THEN returns a ApiClientError.statusNotOk error") {
-                    stub(condition: isHost("api.openweathermap.org")
-                         && isPath("/data/2.5/forecast")
-                         && isMethodGET()
-                    ) { _ in
-                        return HTTPStubsResponse(data: Data(), statusCode: 400, headers: nil)
-                    }
+                    setupStubs(statusCode: 400)
 
                     let apiClient = UrlSessionApiClient()
 
@@ -104,9 +95,30 @@ class UrlSessionApiClientSpec: QuickSpec {
                     await expect(requestError).toEventually(equal(.statusNotOK))
                 }
             }
+
+            context("WHEN request and receive a wrong json") {
+                it("THEN returns a ApiClientError.decodingError error") {
+                    setupStubs(jsonFile: "wrong.json")
+
+                    let apiClient = UrlSessionApiClient()
+
+                    do {
+                        forecastListDto = try await apiClient.get(url: url)
+                    } catch let error {
+                        requestError = error as? ApiClientError
+                    }
+
+                    await expect(forecastListDto).toEventually(beNil())
+                    await expect(requestError).toEventually(equal(.decodingError))
+                }
+            }
         }
 
-        func setupStubs() {
+        func setupStubs(
+            jsonFile: String? = "forecast.json",
+            statusCode: Int32? = 200,
+            error: NSError? = nil
+        ) {
             stub(condition: isHost("api.openweathermap.org")
                  && isPath("/data/2.5/forecast")
                  && containsQueryParams(
@@ -119,7 +131,15 @@ class UrlSessionApiClientSpec: QuickSpec {
                  )
                  && isMethodGET()
             ) { _ in
-                let stubPath = OHPathForFile("forecast.json", type(of: self))
+                if let error = error {
+                    return HTTPStubsResponse(error: error)
+                }
+
+                if let statusCode = statusCode, statusCode != 200 {
+                    return HTTPStubsResponse(data: Data(), statusCode: statusCode, headers: nil)
+                }
+
+                let stubPath = OHPathForFile(jsonFile ?? "forecast.json", type(of: self))
 
                 return fixture(filePath: stubPath!, headers: ["Content-Type": "application/json"])
             }

@@ -38,8 +38,9 @@ class DetailViewModel: ObservableObject {
             self.forecast = domainModelToUIModel(domainModel: forecast)
             self.status = .loaded
         case .failure(let error):
+            print(error)
             self.forecast = ForecastDetailUI()
-            self.status = .failed(error)
+            self.status = .failed("Error: Try again later")
         }
     }
 

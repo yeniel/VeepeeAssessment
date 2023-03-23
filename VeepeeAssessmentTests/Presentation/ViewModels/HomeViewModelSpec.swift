@@ -67,14 +67,14 @@ class HomeViewModelSpec: QuickSpec {
                     await expect(viewModel.forecastList).toEventually(beEmpty())
                 }
 
-                it("THEN publishs failed status, network error") {
+                it("THEN publishs failed status with message 'Error: Try again later'") {
                     setupMocks(error: .networkError)
 
                     let viewModel = HomeViewModel(coordinator: mockCoordinator)
 
                     await viewModel.getForecastList()
 
-                    await expect(viewModel.status).toEventually(equal(.failed(.networkError)))
+                    await expect(viewModel.status).toEventually(equal(.failed("Error: Try again later")))
                 }
             }
         }
