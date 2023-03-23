@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Concrete implementation of `Clock` uses the system Date class
 class ClockImpl: Clock {
     var now: Date {
         Date()

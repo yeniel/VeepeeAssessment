@@ -10,6 +10,8 @@ import Stinsen
 import Factory
 import CoreData
 
+/// To increase the speed I change a little the entry point of the app, in `VeepeeAssessmentApp.swift`.
+/// I cut the app to a simple view in case we are running the tests.
 @main
 struct AppLauncher {
     static func main() throws {

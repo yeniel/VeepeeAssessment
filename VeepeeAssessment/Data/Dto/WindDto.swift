@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// DTO to decode OpenWeatherMap json objects
 struct WindDto: Codable, Equatable {
     let speed: Double
     let directionDegrees: Int

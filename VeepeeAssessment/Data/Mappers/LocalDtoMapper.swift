@@ -9,6 +9,7 @@ import Foundation
 import CoreData
 import Factory
 
+/// Mapper to map `CoreData` models to domain models
 struct LocalDtoMapper {
     @Injected(\.container)
     private var container: NSPersistentContainer

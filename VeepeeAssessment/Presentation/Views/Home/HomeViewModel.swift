@@ -28,8 +28,8 @@ class HomeViewModel: ObservableObject {
     @MainActor
     func getForecastList() async {
         let result = await getForecastListUseCase.execute(
-            city: ViewConstants.defaultCity,
-            days: ViewConstants.defaultDays
+            city: DomainConstants.defaultCity,
+            days: DomainConstants.defaultDays
         )
 
         switch result {

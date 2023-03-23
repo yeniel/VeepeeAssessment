@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// DTO to decode OpenWeatherMap json objects
 struct ForecastDto: Codable, Equatable {
     let datetime: Double
     let main: ForecastMainDto

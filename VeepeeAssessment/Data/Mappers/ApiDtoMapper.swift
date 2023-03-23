@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Mapper to map API dtos to domain models
 struct ApiDtoMapper {
     func dtoToModel(dto: ForecastDto) -> Forecast {
         Forecast(

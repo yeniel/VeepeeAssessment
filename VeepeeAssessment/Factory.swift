@@ -9,6 +9,7 @@ import Foundation
 import Factory
 import CoreData
 
+/// Dependency injector, based on container-based dependency injection pattern.
 extension Container {
     // MARK: ApiClient
 

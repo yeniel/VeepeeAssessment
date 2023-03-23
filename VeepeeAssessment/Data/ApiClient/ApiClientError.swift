@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Define API errors to map `URLSession` erros
 enum ApiClientError: Error {
     case badUrl, requestError, decodingError, statusNotOK
 }

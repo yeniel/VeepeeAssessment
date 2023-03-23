@@ -270,10 +270,10 @@
 		FE12C13729C4A5CE00102C52 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FEE2BE1B29C9B48D006C4A93 /* ViewConstants.swift */,
 				FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */,
-				FEF33F3929CA68C7000F5445 /* NumberUtils.swift */,
 				FEDB849229CB2FCD00797722 /* NetworkMonitorImpl.swift */,
+				FEF33F3929CA68C7000F5445 /* NumberUtils.swift */,
+				FEE2BE1B29C9B48D006C4A93 /* ViewConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -281,9 +281,9 @@
 		FE12C13829C4A5D500102C52 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FE12C13929C4A63F00102C52 /* ScreenStatus.swift */,
 				FE12C13C29C4A65200102C52 /* Detail */,
 				FE12C13B29C4A64C00102C52 /* Home */,
-				FE12C13929C4A63F00102C52 /* ScreenStatus.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,9 +291,9 @@
 		FE12C13B29C4A64C00102C52 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FEE2BE1D29C9BA20006C4A93 /* ForecastUI.swift */,
 				FE12C13D29C4ABA000102C52 /* HomeView.swift */,
 				FE12C14329C4AD3900102C52 /* HomeViewModel.swift */,
-				FEE2BE1D29C9BA20006C4A93 /* ForecastUI.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -351,11 +351,11 @@
 		FE75B5A429C4663E004F8046 = {
 			isa = PBXGroup;
 			children = (
+				072CFD8941CC1927D394852A /* Frameworks */,
+				462D8D51D5D9E7C55F691ED3 /* Pods */,
+				FE75B5AE29C4663E004F8046 /* Products */,
 				FE75B5AF29C4663E004F8046 /* VeepeeAssessment */,
 				FE75B5C529C46640004F8046 /* VeepeeAssessmentTests */,
-				FE75B5AE29C4663E004F8046 /* Products */,
-				462D8D51D5D9E7C55F691ED3 /* Pods */,
-				072CFD8941CC1927D394852A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -405,12 +405,12 @@
 		FE75B5DF29C467FE004F8046 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FEDB848629CB12F100797722 /* Utils */,
-				FEDB848329CB024E00797722 /* Persistence */,
 				FE75B5E229C46835004F8046 /* ApiClient */,
 				FE75B5E329C4683F004F8046 /* Dto */,
 				FE75B5E429C46846004F8046 /* Mappers */,
+				FEDB848329CB024E00797722 /* Persistence */,
 				FE75B5E529C4684F004F8046 /* Repositories */,
+				FEDB848629CB12F100797722 /* Utils */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -418,10 +418,10 @@
 		FE75B5E029C46802004F8046 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				FE75B62C29C4877B004F8046 /* UseCases */,
-				FE75B60E29C47130004F8046 /* Repositories */,
-				FE75B5E929C468B9004F8046 /* Models */,
 				FE75B62F29C48816004F8046 /* DomainConstants.swift */,
+				FE75B5E929C468B9004F8046 /* Models */,
+				FE75B60E29C47130004F8046 /* Repositories */,
+				FE75B62C29C4877B004F8046 /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -429,9 +429,9 @@
 		FE75B5E129C46807004F8046 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FE12C13829C4A5D500102C52 /* Views */,
-				FE12C13729C4A5CE00102C52 /* Utils */,
 				FE12C13629C4A5C600102C52 /* Router */,
+				FE12C13729C4A5CE00102C52 /* Utils */,
+				FE12C13829C4A5D500102C52 /* Views */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -439,11 +439,11 @@
 		FE75B5E229C46835004F8046 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
-				FE75B5EC29C46948004F8046 /* ApiClientError.swift */,
 				FE75B5E729C4689F004F8046 /* ApiClient.swift */,
-				FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */,
-				FE75B5F129C46A4C004F8046 /* HttpMethod.swift */,
+				FE75B5EC29C46948004F8046 /* ApiClientError.swift */,
 				FE75B61C29C476BB004F8046 /* ApiConstants.swift */,
+				FE75B5F129C46A4C004F8046 /* HttpMethod.swift */,
+				FE75B5EE29C46962004F8046 /* UrlSessionApiClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -451,11 +451,11 @@
 		FE75B5E329C4683F004F8046 /* Dto */ = {
 			isa = PBXGroup;
 			children = (
-				FE75B62829C47F07004F8046 /* WindDto.swift */,
 				FE75B5F329C46B0D004F8046 /* ForecastDto.swift */,
+				FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */,
 				FE75B62229C47B94004F8046 /* ForecastMainDto.swift */,
 				FE75B62429C47D78004F8046 /* WeatherDto.swift */,
-				FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */,
+				FE75B62829C47F07004F8046 /* WindDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -480,10 +480,10 @@
 		FE75B5E629C46859004F8046 /* ForecastRepository */ = {
 			isa = PBXGroup;
 			children = (
-				FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */,
-				FE75B61729C47363004F8046 /* ForecastDataSource.swift */,
 				FE75B61929C473AC004F8046 /* ForecastApiDataSource.swift */,
+				FE75B61729C47363004F8046 /* ForecastDataSource.swift */,
 				FEDB848429CB0F1D00797722 /* ForecastLocalDataSource.swift */,
+				FE75B61529C472AD004F8046 /* ForecastRepositoryImpl.swift */,
 			);
 			path = ForecastRepository;
 			sourceTree = "<group>";
@@ -491,12 +491,12 @@
 		FE75B5E929C468B9004F8046 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FEDB848C29CB235400797722 /* Clock.swift */,
 				FE75B5EA29C468CF004F8046 /* DomainError.swift */,
 				FE75B61129C47206004F8046 /* Forecast.swift */,
-				FE12C13229C4A0C400102C52 /* Wind.swift */,
-				FE12C13429C4A47800102C52 /* Weather.swift */,
-				FEDB848C29CB235400797722 /* Clock.swift */,
 				FEDB849029CB2F3A00797722 /* NetworkMonitor.swift */,
+				FE12C13429C4A47800102C52 /* Weather.swift */,
+				FE12C13229C4A0C400102C52 /* Wind.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

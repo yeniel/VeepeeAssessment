@@ -29,8 +29,8 @@ class DetailViewModel: ObservableObject {
     func getForecast() async {
         let result = await getForecastUseCase.execute(
             forecastDatetime: forecastDatetime,
-            city: ViewConstants.defaultCity,
-            days: ViewConstants.defaultDays
+            city: DomainConstants.defaultCity,
+            days: DomainConstants.defaultDays
         )
 
         switch result {

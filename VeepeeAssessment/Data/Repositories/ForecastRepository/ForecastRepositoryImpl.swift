@@ -8,6 +8,7 @@
 import Foundation
 import Factory
 
+/// Concrete implementatino of the `ForecastRepository`
 struct ForecastRepositoryImpl: ForecastRepository {
     @Injected(\.forecastApiDataSource)
     private var apiDataSource: ForecastDataSource

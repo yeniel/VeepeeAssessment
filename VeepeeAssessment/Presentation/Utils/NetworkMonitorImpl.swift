@@ -8,6 +8,8 @@
 import Foundation
 import Network
 
+/// Concrete implementatino of `NetworkMonitor` used to check the connectiviy.
+/// If the user is offline we will get data from persistent data source
 final class NetworkMonitorImpl: ObservableObject, NetworkMonitor {
     @Published private(set) var isConnected = false
 

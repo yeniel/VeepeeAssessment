@@ -9,6 +9,7 @@ import Foundation
 import Factory
 import CoreData
 
+/// Concrete implementation of local data source to get data from `CoreData`
 struct ForecastLocalDataSource: ForecastDataSource {
     @Injected(\.container)
     private var container: NSPersistentContainer

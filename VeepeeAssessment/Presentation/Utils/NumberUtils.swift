@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Different formats to show temperature, wind speed, humidity...
 extension Double {
     var temperatureFormat: String {
         let temperatureInCelcius = Measurement(value: self, unit: UnitTemperature.celsius)
@@ -31,6 +32,7 @@ extension Double {
     }
 }
 
+/// Different formats to show pressure, precipitation, visibility...
 extension Int {
     var pressureFormat: String {
         let pressureInHPA = Measurement(value: Double(self), unit: UnitPressure.hectopascals)

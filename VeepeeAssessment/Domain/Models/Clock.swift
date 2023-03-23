@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This virtual clock is injected into classes that need a Date.now. It necesarry to do the Unit Tests
 protocol Clock {
     var now: Date { get }
 }

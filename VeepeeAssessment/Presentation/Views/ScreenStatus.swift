@@ -7,6 +7,10 @@
 
 import Foundation
 
+/// Define screen states
+/// First the view is in **loading** state,
+/// Then when data is received the state will change to **loaded**
+/// If an error is received the state will change to **failed**
 enum ScreenStatus: Equatable {
     case loading
     case loaded

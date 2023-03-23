@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This protocol is to abstract `NWPathMonitor`
 protocol NetworkMonitor {
     var isConnected: Bool { get }
 

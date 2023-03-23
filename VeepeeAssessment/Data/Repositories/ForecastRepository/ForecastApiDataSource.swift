@@ -8,6 +8,7 @@
 import Foundation
 import Factory
 
+/// Concrete implementation of the api data source to get data from the OpenWeatherMapApi
 struct ForecastApiDataSource: ForecastDataSource {
     @Injected(\.urlSessionApiClient)
     private var apiClient: ApiClient

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// The concrete implementation of `ApiCclient` is based in `URLSession`.
 struct UrlSessionApiClient: ApiClient {
     let decoder: JSONDecoder = .init()
 

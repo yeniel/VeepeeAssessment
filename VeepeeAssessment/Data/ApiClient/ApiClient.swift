@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Protocol to define http operations
 protocol ApiClient {
     func get<T: Decodable>(url: String) async throws -> T
 }
