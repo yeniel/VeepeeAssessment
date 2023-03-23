@@ -117,6 +117,10 @@ struct ObjectMother {
         ]
     }
 
+    static var forecastFromApi: Forecast {
+        forecastListFromApi[0]
+    }
+
     static var forecastListFromLocal: [Forecast] {
         [
             Forecast(
@@ -146,5 +150,45 @@ struct ObjectMother {
                 precipitationProbability: 0.64
             )
         ]
+    }
+
+    static var forecastFromLocal: Forecast {
+        forecastListFromLocal[0]
+    }
+
+    static var forecastListUI: [ForecastUI] {
+        [
+            ForecastUI(
+                id: Date(timeIntervalSince1970: 1679508000),
+                datetime: "Wed 19:00",
+                minTemperature: "13°C",
+                maxTemperature: "14°C",
+                icon: "https://openweathermap.org/img/wn/04d.png"
+            ),
+            ForecastUI(
+                id: Date(timeIntervalSince1970: 1679518800),
+                datetime: "Wed 22:00",
+                minTemperature: "12°C",
+                maxTemperature: "14°C",
+                icon: "https://openweathermap.org/img/wn/10n.png"
+            )
+        ]
+    }
+
+    static var forecastDetailUI: ForecastDetailUI {
+        ForecastDetailUI(
+            datetime: "19:00, Wednesday, Mar 22",
+            temperature: "14°C",
+            temperatureMin: "13°C",
+            temperatureMax: "14°C",
+            feelsLike: "14°C",
+            weatherIcon: "https://openweathermap.org/img/wn/04d@4x.png",
+            weatherDescription: "Broken Clouds",
+            pressure: "1.007 hPa",
+            humidity: "74%",
+            wind: "23 km/h",
+            visibility: "10 km",
+            precipitationProbability: "3.0%"
+        )
     }
 }

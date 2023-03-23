@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ForecastDetailUI {
+struct ForecastDetailUI: Equatable {
     let datetime: String
     let temperature: String
     let temperatureMin: String

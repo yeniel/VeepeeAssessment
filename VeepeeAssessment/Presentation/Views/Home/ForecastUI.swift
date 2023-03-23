@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ForecastUI: Identifiable {
+struct ForecastUI: Identifiable, Equatable {
     var id: Date
     let datetime: String
     let minTemperature: String

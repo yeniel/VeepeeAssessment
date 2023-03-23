@@ -55,7 +55,7 @@ class DetailViewModel: ObservableObject {
         let humidity = domainModel.humidity.percentageFormat
         let wind = (domainModel.wind.speed * 3.6).windFormat
         let visibility = domainModel.visibility.visibilityFormat
-        let precipitationProbability = domainModel.precipitationProbability.percentageFormat
+        let precipitationProbability = (domainModel.precipitationProbability * 100).percentageFormat
 
         return ForecastDetailUI(
             datetime: datetime,

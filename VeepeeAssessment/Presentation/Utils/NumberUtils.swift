@@ -19,8 +19,11 @@ extension Double {
 
     var windFormat: String {
         let windInKmh = Measurement(value: self, unit: UnitSpeed.kilometersPerHour)
+        let formatter = MeasurementFormatter()
 
-        return MeasurementFormatter().string(from: windInKmh)
+        formatter.numberFormatter.maximumFractionDigits = 0
+
+        return formatter.string(from: windInKmh)
     }
 
     var percentageFormat: String {

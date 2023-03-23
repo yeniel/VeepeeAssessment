@@ -57,7 +57,7 @@
 		FE4381E429CB740000CE0439 /* NetworkMonitorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB849229CB2FCD00797722 /* NetworkMonitorImpl.swift */; };
 		FE4381E529CB740000CE0439 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1B29C9B48D006C4A93 /* ViewConstants.swift */; };
 		FE4381E629CB740000CE0439 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */; };
-		FE4381E729CB740000CE0439 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3929CA68C7000F5445 /* Utils.swift */; };
+		FE4381E729CB740000CE0439 /* NumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3929CA68C7000F5445 /* NumberUtils.swift */; };
 		FE4381E829CB740400CE0439 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C14129C4ACDA00102C52 /* MainCoordinator.swift */; };
 		FE4381E929CB740400CE0439 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C13F29C4AC9E00102C52 /* AppCoordinator.swift */; };
 		FE4381EB29CB741A00CE0439 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4381EA29CB741A00CE0439 /* Mocks.swift */; };
@@ -108,10 +108,18 @@
 		FEE2BE1E29C9BA20006C4A93 /* ForecastUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1D29C9BA20006C4A93 /* ForecastUI.swift */; };
 		FEE2BE2029C9BB59006C4A93 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */; };
 		FEE2BE2729C9EC2D006C4A93 /* ForecastListDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */; };
+		FEE4EC9829CC552F00F85EFD /* GetForecastListUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4EC9729CC552F00F85EFD /* GetForecastListUseCaseSpec.swift */; };
+		FEE4EC9A29CC62A800F85EFD /* GetForecastUseCasSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4EC9929CC62A800F85EFD /* GetForecastUseCasSpec.swift */; };
+		FEE4EC9F29CC658400F85EFD /* DateUtilsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4EC9E29CC658400F85EFD /* DateUtilsSpec.swift */; };
+		FEE4ECA129CC66FD00F85EFD /* NumberUtilsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4ECA029CC66FD00F85EFD /* NumberUtilsSpec.swift */; };
+		FEE4ECA329CC6B2300F85EFD /* HomeViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4ECA229CC6B2300F85EFD /* HomeViewModelSpec.swift */; };
+		FEE4ECA529CC750000F85EFD /* DetailViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4ECA429CC74FF00F85EFD /* DetailViewModelSpec.swift */; };
+		FEE4ECA729CC7A4500F85EFD /* HomeViewSnapshotSuccessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4ECA629CC7A4500F85EFD /* HomeViewSnapshotSuccessSpec.swift */; };
+		FEE4ECA929CC998900F85EFD /* HomeViewSnapshotFailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE4ECA829CC998900F85EFD /* HomeViewSnapshotFailed.swift */; };
 		FEF33F3429CA5A4D000F5445 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = FEF33F3329CA5A4D000F5445 /* CachedAsyncImage */; };
 		FEF33F3629CA5EFC000F5445 /* GetForecastUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3529CA5EFC000F5445 /* GetForecastUseCase.swift */; };
 		FEF33F3829CA6224000F5445 /* ForecastDetailUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3729CA6224000F5445 /* ForecastDetailUI.swift */; };
-		FEF33F3A29CA68C7000F5445 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3929CA68C7000F5445 /* Utils.swift */; };
+		FEF33F3A29CA68C7000F5445 /* NumberUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF33F3929CA68C7000F5445 /* NumberUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,9 +191,17 @@
 		FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		FEE2BE2529C9E1C8006C4A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListDto.swift; sourceTree = "<group>"; };
+		FEE4EC9729CC552F00F85EFD /* GetForecastListUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastListUseCaseSpec.swift; sourceTree = "<group>"; };
+		FEE4EC9929CC62A800F85EFD /* GetForecastUseCasSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCasSpec.swift; sourceTree = "<group>"; };
+		FEE4EC9E29CC658400F85EFD /* DateUtilsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilsSpec.swift; sourceTree = "<group>"; };
+		FEE4ECA029CC66FD00F85EFD /* NumberUtilsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberUtilsSpec.swift; sourceTree = "<group>"; };
+		FEE4ECA229CC6B2300F85EFD /* HomeViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelSpec.swift; sourceTree = "<group>"; };
+		FEE4ECA429CC74FF00F85EFD /* DetailViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelSpec.swift; sourceTree = "<group>"; };
+		FEE4ECA629CC7A4500F85EFD /* HomeViewSnapshotSuccessSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSnapshotSuccessSpec.swift; sourceTree = "<group>"; };
+		FEE4ECA829CC998900F85EFD /* HomeViewSnapshotFailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewSnapshotFailed.swift; sourceTree = "<group>"; };
 		FEF33F3529CA5EFC000F5445 /* GetForecastUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetForecastUseCase.swift; sourceTree = "<group>"; };
 		FEF33F3729CA6224000F5445 /* ForecastDetailUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDetailUI.swift; sourceTree = "<group>"; };
-		FEF33F3929CA68C7000F5445 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FEF33F3929CA68C7000F5445 /* NumberUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,7 +266,7 @@
 			children = (
 				FEE2BE1B29C9B48D006C4A93 /* ViewConstants.swift */,
 				FEE2BE1F29C9BB59006C4A93 /* DateUtils.swift */,
-				FEF33F3929CA68C7000F5445 /* Utils.swift */,
+				FEF33F3929CA68C7000F5445 /* NumberUtils.swift */,
 				FEDB849229CB2FCD00797722 /* NetworkMonitorImpl.swift */,
 			);
 			path = Utils;
@@ -300,6 +316,8 @@
 		FE4381BC29CB72EF00CE0439 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FEE4EC9729CC552F00F85EFD /* GetForecastListUseCaseSpec.swift */,
+				FEE4EC9929CC62A800F85EFD /* GetForecastUseCasSpec.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -307,6 +325,9 @@
 		FE4381BD29CB72F300CE0439 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FEE4EC9D29CC657500F85EFD /* Snapshots */,
+				FEE4EC9C29CC656B00F85EFD /* ViewModels */,
+				FEE4EC9B29CC656800F85EFD /* Utils */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -505,6 +526,33 @@
 				FEDB849429CB300700797722 /* ClockImpl.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FEE4EC9B29CC656800F85EFD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FEE4EC9E29CC658400F85EFD /* DateUtilsSpec.swift */,
+				FEE4ECA029CC66FD00F85EFD /* NumberUtilsSpec.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FEE4EC9C29CC656B00F85EFD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FEE4ECA229CC6B2300F85EFD /* HomeViewModelSpec.swift */,
+				FEE4ECA429CC74FF00F85EFD /* DetailViewModelSpec.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FEE4EC9D29CC657500F85EFD /* Snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				FEE4ECA629CC7A4500F85EFD /* HomeViewSnapshotSuccessSpec.swift */,
+				FEE4ECA829CC998900F85EFD /* HomeViewSnapshotFailed.swift */,
+			);
+			path = Snapshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -714,7 +762,7 @@
 				FEDB849529CB300700797722 /* ClockImpl.swift in Sources */,
 				FE75B60D29C47114004F8046 /* Factory.swift in Sources */,
 				FEE2BE2029C9BB59006C4A93 /* DateUtils.swift in Sources */,
-				FEF33F3A29CA68C7000F5445 /* Utils.swift in Sources */,
+				FEF33F3A29CA68C7000F5445 /* NumberUtils.swift in Sources */,
 				FE12C14029C4AC9E00102C52 /* AppCoordinator.swift in Sources */,
 				FE12C13E29C4ABA000102C52 /* HomeView.swift in Sources */,
 				FE75B62E29C4878C004F8046 /* GetForecastListUseCase.swift in Sources */,
@@ -751,6 +799,7 @@
 			files = (
 				FE4381D129CB73DE00CE0439 /* ForecastLocalDataSource.swift in Sources */,
 				FE4381E829CB740400CE0439 /* MainCoordinator.swift in Sources */,
+				FEE4EC9F29CC658400F85EFD /* DateUtilsSpec.swift in Sources */,
 				FE4381D729CB73EB00CE0439 /* Wind.swift in Sources */,
 				FE4381ED29CB758A00CE0439 /* UrlSessionApiClientSpec.swift in Sources */,
 				FE4381C229CB73D000CE0439 /* ClockImpl.swift in Sources */,
@@ -758,6 +807,7 @@
 				FE4381E929CB740400CE0439 /* AppCoordinator.swift in Sources */,
 				FE4381CA29CB73D600CE0439 /* WindDto.swift in Sources */,
 				FE4381E029CB73FA00CE0439 /* HomeView.swift in Sources */,
+				FEE4ECA529CC750000F85EFD /* DetailViewModelSpec.swift in Sources */,
 				FE4381E529CB740000CE0439 /* ViewConstants.swift in Sources */,
 				FE4381CE29CB73DA00CE0439 /* ApiDtoMapper.swift in Sources */,
 				FE4381DD29CB73F600CE0439 /* ForecastDetailUI.swift in Sources */,
@@ -765,9 +815,10 @@
 				FE4381C029CB731700CE0439 /* ObjectMother.swift in Sources */,
 				FE4381D829CB73EB00CE0439 /* NetworkMonitor.swift in Sources */,
 				FE4381DB29CB73EB00CE0439 /* Forecast.swift in Sources */,
+				FEE4ECA129CC66FD00F85EFD /* NumberUtilsSpec.swift in Sources */,
 				FE4381EB29CB741A00CE0439 /* Mocks.swift in Sources */,
 				FE4381D329CB73E100CE0439 /* GetForecastUseCase.swift in Sources */,
-				FE4381E729CB740000CE0439 /* Utils.swift in Sources */,
+				FE4381E729CB740000CE0439 /* NumberUtils.swift in Sources */,
 				FE4381D229CB73DE00CE0439 /* ForecastRepositoryImpl.swift in Sources */,
 				FE4381C129CB73D000CE0439 /* UrlSessionApiClient.swift in Sources */,
 				FE4381E629CB740000CE0439 /* DateUtils.swift in Sources */,
@@ -786,13 +837,18 @@
 				FE4381DC29CB73EE00CE0439 /* DomainConstants.swift in Sources */,
 				FE4381CF29CB73DE00CE0439 /* ForecastDataSource.swift in Sources */,
 				FE4381D629CB73EB00CE0439 /* Clock.swift in Sources */,
+				FEE4ECA929CC998900F85EFD /* HomeViewSnapshotFailed.swift in Sources */,
 				FE4381E129CB73FA00CE0439 /* ForecastUI.swift in Sources */,
 				FE4381DE29CB73F600CE0439 /* DetailView.swift in Sources */,
 				FE4381C929CB73D600CE0439 /* ForecastDto.swift in Sources */,
 				FE4381F229CBB21C00CE0439 /* Factory.swift in Sources */,
 				FE4381C529CB73D000CE0439 /* UserDefaults.swift in Sources */,
 				FE4381D429CB73E100CE0439 /* GetForecastListUseCase.swift in Sources */,
+				FEE4ECA729CC7A4500F85EFD /* HomeViewSnapshotSuccessSpec.swift in Sources */,
 				FE4381C829CB73D600CE0439 /* ForecastListDto.swift in Sources */,
+				FEE4EC9A29CC62A800F85EFD /* GetForecastUseCasSpec.swift in Sources */,
+				FEE4ECA329CC6B2300F85EFD /* HomeViewModelSpec.swift in Sources */,
+				FEE4EC9829CC552F00F85EFD /* GetForecastListUseCaseSpec.swift in Sources */,
 				FE4381DA29CB73EB00CE0439 /* DomainError.swift in Sources */,
 				FE4381DF29CB73F600CE0439 /* DetailViewModel.swift in Sources */,
 				FE4381E329CB73FC00CE0439 /* ScreenStatus.swift in Sources */,

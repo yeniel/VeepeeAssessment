@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ScreenStatus {
+enum ScreenStatus: Equatable {
     case loading
     case loaded
     case failed(DomainError)

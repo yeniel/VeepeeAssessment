@@ -86,4 +86,36 @@ final class MockForecastLocalDataSource: ForecastDataSource {
     }
 }
 
+struct MockForecastRepository: ForecastRepository {
+    var error: ApiClientError?
+
+    init(error: ApiClientError?) {
+        self.error = error
+    }
+
+    func getForecast(city: String, days: Int) async throws -> [Forecast] {
+        if let error = error {
+            throw error
+        }
+
+        return ObjectMother.forecastListFromApi
+    }
+}
+
+struct MockGetForecastListUseCase: GetForecastListUseCase {
+    var error: DomainError?
+
+    init(error: DomainError? = nil) {
+        self.error = error
+    }
+
+    func execute(city: String, days: Int) async -> Result<[Forecast], DomainError> {
+        if let error = error {
+            return .failure(error)
+        }
+
+        return .success(ObjectMother.forecastListFromApi)
+    }
+}
+
 // swiftlint:enable force_cast

@@ -26,10 +26,10 @@ struct GetForecastListUseCaseImpl: GetForecastListUseCase {
             return .success(forecastList)
         } catch let error {
             switch error {
-            case ApiClientError.decodingError:
-                return .failure(.decodingError)
-            default:
+            case ApiClientError.requestError:
                 return .failure(.networkError)
+            default:
+                return .failure(.unknown)
             }
         }
     }

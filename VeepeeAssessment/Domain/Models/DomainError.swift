@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum DomainError: Error {
+enum DomainError: Error, Equatable {
     case networkError
-    case decodingError
+    case forecastNotFound
     case unknown
 }

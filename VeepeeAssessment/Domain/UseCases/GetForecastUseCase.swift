@@ -26,7 +26,7 @@ struct GetForecastUseCaseImpl: GetForecastUseCase {
         switch result {
         case .success(let forecastList):
             guard let forecast = forecastList.first(where: { $0.datetime == forecastDatetime }) else {
-                return .failure(.unknown)
+                return .failure(.forecastNotFound)
             }
 
             return .success(forecast)
