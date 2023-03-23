@@ -28,7 +28,6 @@
 		FE4381C729CB73D000CE0439 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B61C29C476BB004F8046 /* ApiConstants.swift */; };
 		FE4381C829CB73D600CE0439 /* ForecastListDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE2BE2629C9EC2D006C4A93 /* ForecastListDto.swift */; };
 		FE4381C929CB73D600CE0439 /* ForecastDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B5F329C46B0D004F8046 /* ForecastDto.swift */; };
-		FE4381CA29CB73D600CE0439 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62829C47F07004F8046 /* WindDto.swift */; };
 		FE4381CB29CB73D600CE0439 /* WeatherDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62429C47D78004F8046 /* WeatherDto.swift */; };
 		FE4381CC29CB73D600CE0439 /* ForecastMainDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62229C47B94004F8046 /* ForecastMainDto.swift */; };
 		FE4381CD29CB73DA00CE0439 /* LocalDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62029C47955004F8046 /* LocalDtoMapper.swift */; };
@@ -95,12 +94,13 @@
 		FE75B62129C47955004F8046 /* LocalDtoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62029C47955004F8046 /* LocalDtoMapper.swift */; };
 		FE75B62329C47B94004F8046 /* ForecastMainDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62229C47B94004F8046 /* ForecastMainDto.swift */; };
 		FE75B62529C47D78004F8046 /* WeatherDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62429C47D78004F8046 /* WeatherDto.swift */; };
-		FE75B62929C47F07004F8046 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62829C47F07004F8046 /* WindDto.swift */; };
 		FE75B62E29C4878C004F8046 /* GetForecastListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62D29C4878C004F8046 /* GetForecastListUseCase.swift */; };
 		FE75B63029C48816004F8046 /* DomainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62F29C48816004F8046 /* DomainConstants.swift */; };
 		FEDA07B029CCEBF3008B1D41 /* DetailViewSnapshotSuccessSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA07AF29CCEBF3008B1D41 /* DetailViewSnapshotSuccessSpec.swift */; };
 		FEDA07B229CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA07B129CCED3D008B1D41 /* DetailViewSnapshotFailedSpec.swift */; };
 		FEDA07B429CCF161008B1D41 /* wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = FEDA07B329CCF161008B1D41 /* wrong.json */; };
+		FEDA07B529CD0B61008B1D41 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62829C47F07004F8046 /* WindDto.swift */; };
+		FEDA07B629CD0B61008B1D41 /* WindDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE75B62829C47F07004F8046 /* WindDto.swift */; };
 		FEDB848529CB0F1D00797722 /* ForecastLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848429CB0F1D00797722 /* ForecastLocalDataSource.swift */; };
 		FEDB848D29CB235400797722 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848C29CB235400797722 /* Clock.swift */; };
 		FEDB848F29CB256B00797722 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB848E29CB256B00797722 /* UserDefaults.swift */; };
@@ -781,6 +781,7 @@
 				FE12C14429C4AD3900102C52 /* HomeViewModel.swift in Sources */,
 				FE75B61A29C473AC004F8046 /* ForecastApiDataSource.swift in Sources */,
 				FE75B61829C47363004F8046 /* ForecastDataSource.swift in Sources */,
+				FEDA07B629CD0B61008B1D41 /* WindDto.swift in Sources */,
 				FE75B62329C47B94004F8046 /* ForecastMainDto.swift in Sources */,
 				FE75B61F29C478ED004F8046 /* ApiDtoMapper.swift in Sources */,
 				FE75B62129C47955004F8046 /* LocalDtoMapper.swift in Sources */,
@@ -799,7 +800,6 @@
 				FE75B5BD29C46640004F8046 /* VeepeeAssessment.xcdatamodeld in Sources */,
 				FE75B5F229C46A4C004F8046 /* HttpMethod.swift in Sources */,
 				FEDB848F29CB256B00797722 /* UserDefaults.swift in Sources */,
-				FE75B62929C47F07004F8046 /* WindDto.swift in Sources */,
 				FE12C13A29C4A63F00102C52 /* ScreenStatus.swift in Sources */,
 				FE12C14229C4ACDA00102C52 /* MainCoordinator.swift in Sources */,
 				FEDB849129CB2F3A00797722 /* NetworkMonitor.swift in Sources */,
@@ -831,8 +831,8 @@
 				FE4381C229CB73D000CE0439 /* ClockImpl.swift in Sources */,
 				FE4381CB29CB73D600CE0439 /* WeatherDto.swift in Sources */,
 				FE4381E929CB740400CE0439 /* AppCoordinator.swift in Sources */,
-				FE4381CA29CB73D600CE0439 /* WindDto.swift in Sources */,
 				FE4381E029CB73FA00CE0439 /* HomeView.swift in Sources */,
+				FEDA07B529CD0B61008B1D41 /* WindDto.swift in Sources */,
 				FEE4ECA529CC750000F85EFD /* DetailViewModelSpec.swift in Sources */,
 				FE4381E529CB740000CE0439 /* ViewConstants.swift in Sources */,
 				FE4381CE29CB73DA00CE0439 /* ApiDtoMapper.swift in Sources */,
