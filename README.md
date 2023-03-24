@@ -1,6 +1,6 @@
 # Veepee Assessment
 [![Build Status](https://app.bitrise.io/app/29b4d154-d790-4c81-9e70-a375356f44e2/status.svg?token=4j8W8x6WUFMiXHY_y1Nmbw&branch=master)](https://app.bitrise.io/app/29b4d154-d790-4c81-9e70-a375356f44e2)
-[![codecov](https://codecov.io/gh/yeniel/CabifyMobileChallenge/branch/main/graph/badge.svg?token=XW3SS8R6OB)](https://codecov.io/gh/yeniel/CabifyMobileChallenge)
+[![codecov](https://codecov.io/gh/yeniel/VeepeeAssessment/branch/main/graph/badge.svg?token=N65UOGNUGF)](https://codecov.io/gh/yeniel/VeepeeAssessment)
 [![Language](https://img.shields.io/static/v1.svg?label=language&message=Swift%205&color=FA7343&logo=swift&style=flat-square)](https://swift.org)
 [![Platform](https://img.shields.io/static/v1.svg?label=platforms&message=iOS%20&logo=apple&style=flat-square)](https://apple.com)
 
