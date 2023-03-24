@@ -15,7 +15,7 @@ class HomeViewSnapshotFailedSpec: QuickSpec {
     override func spec() {
         var mockCoordinator: MockMainCoordinator!
 
-        isRecording = false
+        isRecording = true
 
         beforeEach {
             Container.shared.manager.push()
