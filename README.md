@@ -6,7 +6,7 @@
 
 This is my implementation of a the Veepee Assessment. The specification readme is [here](ReadmeAssets/specifications.md).
 
-VIDEO!!!!
+https://user-images.githubusercontent.com/4428478/227401791-fe614bad-5dd8-470b-8046-d19ea04d12b4.mov
 
 ## Table of contents
 1. [Installation](#installation)
