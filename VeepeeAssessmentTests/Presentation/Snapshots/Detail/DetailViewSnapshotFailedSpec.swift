@@ -45,7 +45,12 @@ class DetailViewSnapshotFailedSpec: QuickSpec {
         }
 
         func setupMocks(error: DomainError? = nil) {
-            Container.shared.getForecastUseCase.register { MockGetForecastUseCase(error: error) }
+            Container.shared.getForecastUseCase.register { MockGetForecastUseCase(error: error)
+            }
+
+            Container.shared.dateUtils.register {
+                DateUtils(timeZoneProvider: TestTimeZoneProvider())
+            }
         }
     }
 }

@@ -79,6 +79,10 @@ class DetailViewModelSpec: QuickSpec {
             )
 
             RouterStore.shared.store(router: mockNavigationRouter)
+
+            Container.shared.dateUtils.register {
+                DateUtils(timeZoneProvider: TestTimeZoneProvider())
+            }
         }
     }
 }

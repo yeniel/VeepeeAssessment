@@ -49,7 +49,12 @@ class HomeViewSnapshotFailedSpec: QuickSpec {
         func setupMocks(error: DomainError? = nil) {
             mockCoordinator = MockMainCoordinator()
 
-            Container.shared.getForecastListUseCase.register { MockGetForecastListUseCase(error: error) }
+            Container.shared.getForecastListUseCase.register { MockGetForecastListUseCase(error: error)
+            }
+
+            Container.shared.dateUtils.register {
+                DateUtils(timeZoneProvider: TestTimeZoneProvider())
+            }
         }
     }
 }

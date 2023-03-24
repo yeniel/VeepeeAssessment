@@ -70,4 +70,8 @@ extension Container {
     var networkMonitor: Factory<NetworkMonitor> {
         Factory(self) { NetworkMonitorImpl() }.singleton
     }
+
+    var dateUtils: Factory<DateUtils> {
+        Factory(self) { DateUtils(timeZoneProvider: CurrentTimeZoneProvider()) }
+    }
 }

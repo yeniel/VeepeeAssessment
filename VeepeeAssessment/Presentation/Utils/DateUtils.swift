@@ -7,20 +7,24 @@
 
 import Foundation
 
-extension Date {
-    var homeForecastFormat: String {
+struct DateUtils {
+    let timeZoneProvider: TimeZoneProvider
+
+    func homeForecastFormat(date: Date) -> String {
         let dateFormatter = DateFormatter()
 
         dateFormatter.dateFormat = "E HH:mm"
+        dateFormatter.timeZone = timeZoneProvider.timeZone
 
-        return dateFormatter.string(from: self).capitalized
+        return dateFormatter.string(from: date).capitalized
     }
 
-    var detailForecastFormat: String {
+    func detailForecastFormat(date: Date) -> String {
         let dateFormatter = DateFormatter()
 
         dateFormatter.dateFormat = "HH:mm, EEEE, MMM d"
+        dateFormatter.timeZone = timeZoneProvider.timeZone
 
-        return dateFormatter.string(from: self).capitalized
+        return dateFormatter.string(from: date).capitalized
     }
 }

@@ -19,6 +19,9 @@ class HomeViewModel: ObservableObject {
     @Injected(\.getForecastListUseCase)
     private var getForecastListUseCase
 
+    @Injected(\.dateUtils)
+    private var dateUtils
+
     private let coordinator: MainCoordinatorProtocol
 
     init(coordinator: MainCoordinatorProtocol) {
@@ -48,7 +51,7 @@ class HomeViewModel: ObservableObject {
     }
 
     private func domainModelToUIModel(domainModel: Forecast) -> ForecastUI {
-        let datetime = domainModel.datetime.homeForecastFormat
+        let datetime = dateUtils.homeForecastFormat(date: domainModel.datetime)
         let minTemperature = domainModel.temperatureMin.temperatureFormat
         let maxTemperature = domainModel.temperatureMax.temperatureFormat
         let icon = ViewConstants.imagesUrl + domainModel.weather.icon + ViewConstants.imageType

@@ -19,6 +19,9 @@ class DetailViewModel: ObservableObject {
     @Injected(\.getForecastUseCase)
     private var getForecastUseCase: GetForecastUseCase
 
+    @Injected(\.dateUtils)
+    private var dateUtils
+
     private let forecastDatetime: Date
 
     init(forecastDatetime: Date) {
@@ -45,7 +48,7 @@ class DetailViewModel: ObservableObject {
     }
 
     private func domainModelToUIModel(domainModel: Forecast) -> ForecastDetailUI {
-        let datetime = domainModel.datetime.detailForecastFormat
+        let datetime = dateUtils.detailForecastFormat(date: domainModel.datetime)
         let temperature = domainModel.temperature.temperatureFormat
         let temperatureMin = domainModel.temperatureMin.temperatureFormat
         let temperatureMax = domainModel.temperatureMax.temperatureFormat
