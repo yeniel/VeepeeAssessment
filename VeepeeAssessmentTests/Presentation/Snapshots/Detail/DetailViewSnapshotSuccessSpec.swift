@@ -13,7 +13,7 @@ import Foundation
 
 class DetailViewSnapshotSuccessSpec: QuickSpec {
     override func spec() {
-        isRecording = true
+        isRecording = false
 
         beforeEach {
             Container.shared.manager.push()
