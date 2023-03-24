@@ -50,8 +50,8 @@ I tried to follow the bases of a **Clean Architecture** and the **SOLID** princi
 #### Repositories
 I implemented the **repository pattern** for forecast request. The repository pattern is good to manage collection of items.
 
-For the forecast list, I implemented two concreate data source, one is the api data source to get data from the OpenWeatherMapApi; and the other is a local data source to get data from CoreData.
-The cache logic have was be added in the repository class. The cached expired every 3 hours, I took this interval because in the smallest interval between two forecasts in the API.
+For the forecast list, I implemented two concreate data source, one is the api data source to get data from the OpenWeatherMapApi; and the other is a local data source to get data from `CoreData`.
+The cache logic have was be added in the repository class. The cached expired every 3 hours, I took this interval because is the smallest interval between two forecasts in the API.
 We could add also a memory data source or just cache in memory in the repository class. But for this small project with only one request is not needed.
 
 The concrete implementation of the api client is based in `URLSession`.
@@ -70,7 +70,7 @@ The `ApiClientError` is used to map the API errors. The `CoreData` errors are on
 Core models of the business.
 
 #### Errors
-The model `DomainError` is used specify business errors like forecast not found.
+The model `DomainError` is used to specify business errors like forecast not found.
 
 #### Use Cases
 If this project was scalated I would add the business logic in the use cases, to diferentiate it from the presentation logic. In the use cases I also map data errors to domain erros. 
@@ -110,7 +110,8 @@ The **coverage** is **64,8%**
 ### Subjects Under Test
 
 #### Data
-- Repositories: Test cache logic and map dto to domain model.
+- Repository: Test cache logic and map dto to domain model.
+- ApiDataSource: Test request url and errors.
 - UrlSessionApiClient: Test json parse to Codable Dtos. I used OHHTTPStubs to stub request using mocked jsons.
 
 #### Domain
@@ -119,6 +120,7 @@ The **coverage** is **64,8%**
 #### Presentation
 - ViewModels: Test presentation logic.
 - Views: Snapshots to test all the design. The snapshot images are in [Snapsgots](VeepeeAssessmentTests/Presentation/Snapshots/)
+- DateUtils and NumberUtils
 
 ## CI
 I chose **Bitrise** as CI. I created a workflow with a trigger on every push on main branch. You can see the badge of the status in the top of this README, and if you click on it you will see the Bitrise builds. There also a badge of code coverage.
