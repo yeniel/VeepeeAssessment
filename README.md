@@ -48,7 +48,7 @@ I tried to follow the bases of a **Clean Architecture** and the **SOLID** princi
 
 ### Data Layer
 #### Repositories
-I implemented the **repository pattern** for products and order requests. The repository pattern is good to manage collection of items.
+I implemented the **repository pattern** for forecast request. The repository pattern is good to manage collection of items.
 
 For the forecast list, I implemented two concreate data source, one is the api data source to get data from the OpenWeatherMapApi; and the other is a local data source to get data from CoreData.
 The cache logic have was be added in the repository class. The cached expired every 3 hours, I took this interval because in the smallest interval between two forecasts in the API.
