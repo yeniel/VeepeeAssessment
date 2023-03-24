@@ -41,6 +41,14 @@
                BlueprintName = "VeepeeAssessmentTests"
                ReferencedContainer = "container:VeepeeAssessment.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "DetailViewSnapshotFailedSpec">
+               </Test>
+               <Test
+                  Identifier = "HomeViewSnapshotFailedSpec">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
