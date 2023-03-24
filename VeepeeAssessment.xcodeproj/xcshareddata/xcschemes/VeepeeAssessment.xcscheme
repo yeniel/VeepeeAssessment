@@ -43,10 +43,10 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "DetailViewSnapshotFailedSpec">
+                  Identifier = "DetailViewSnapshotSuccessSpec">
                </Test>
                <Test
-                  Identifier = "HomeViewSnapshotFailedSpec">
+                  Identifier = "HomeViewSnapshotSuccessSpec">
                </Test>
             </SkippedTests>
          </TestableReference>
