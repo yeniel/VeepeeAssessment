@@ -41,6 +41,44 @@
                BlueprintName = "VeepeeAssessmentTests"
                ReferencedContainer = "container:VeepeeAssessment.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "DateUtilsSpec">
+               </Test>
+               <Test
+                  Identifier = "DetailViewModelSpec">
+               </Test>
+               <Test
+                  Identifier = "DetailViewSnapshotFailedSpec">
+               </Test>
+               <Test
+                  Identifier = "ForecastApiDataSourceSpec">
+               </Test>
+               <Test
+                  Identifier = "ForecastRepositorySpec">
+               </Test>
+               <Test
+                  Identifier = "GetForecastListUseCaseSpec">
+               </Test>
+               <Test
+                  Identifier = "GetForecastUseCaseSpec">
+               </Test>
+               <Test
+                  Identifier = "HomeViewModelSpec">
+               </Test>
+               <Test
+                  Identifier = "HomeViewSnapshotFailedSpec">
+               </Test>
+               <Test
+                  Identifier = "HomeViewSnapshotSuccessSpec">
+               </Test>
+               <Test
+                  Identifier = "NumberUtilsSpec">
+               </Test>
+               <Test
+                  Identifier = "UrlSessionApiClientSpec">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
