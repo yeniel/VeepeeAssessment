@@ -37,7 +37,7 @@ class DetailViewSnapshotSuccessSpec: QuickSpec {
                         matching: view,
                         as: .image(
                             layout: .fixed(width: 375, height: 667),
-                            traits: .init(userInterfaceStyle: .dark)
+                            traits: .init(userInterfaceStyle: .light)
                         )
                     )
                 }
