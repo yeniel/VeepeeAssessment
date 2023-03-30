@@ -16,9 +16,6 @@ struct ForecastRepositoryImpl: ForecastRepository {
     @Injected(\.forecastLocalDataSource)
     private var localDataSource: ForecastDataSource
 
-    @Injected(\.apiDtoMapper)
-    private var mapper: ApiDtoMapper
-
     @Injected(\.clock)
     private var clock: Clock
 
@@ -45,7 +42,7 @@ struct ForecastRepositoryImpl: ForecastRepository {
         }
 
         let forecastDtoList = try await dataSource.getForecastList(city: city, days: days)
-        let forecastList = forecastDtoList.map { mapper.dtoToModel(dto: $0) }
+        let forecastList = forecastDtoList.map { $0.model }
 
         if isCacheExpired {
             localDataSource.saveForecastList(forecastList: forecastDtoList)

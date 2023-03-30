@@ -14,16 +14,13 @@ struct ForecastLocalDataSource: ForecastDataSource {
     @Injected(\.container)
     private var container: NSPersistentContainer
 
-    @Injected(\.localDtoMapper)
-    private var mapper: LocalDtoMapper
-
     private var context: NSManagedObjectContext {
         container.viewContext
     }
 
     func getForecastList(city: String, days: Int) async throws -> [ForecastDto] {
         let cdForecastList = fetchForecastList()
-        let forecastListDto = cdForecastList.compactMap { mapper.coreDataToDto(entity: $0) }
+        let forecastListDto = cdForecastList.compactMap { $0.dto(context: context) }
 
         return forecastListDto
     }
@@ -34,9 +31,9 @@ struct ForecastLocalDataSource: ForecastDataSource {
 
             forecastList.forEach { forecastDto in
                 let forecastCD = ForecastCD(context: context)
-                let mainCD = mapper.dtoToCoreData(dto: forecastDto.main, context: context)
-                let weatherCD = mapper.dtoToCoreData(dto: forecastDto.weather.first, context: context)
-                let windCD = mapper.dtoToCoreData(dto: forecastDto.wind, context: context)
+                let mainCD = forecastDto.main.coreData(context: context)
+                let weatherCD = forecastDto.weather.first?.coreData(context: context)
+                let windCD = forecastDto.wind.coreData(context: context)
 
                 forecastCD.datetime = forecastDto.datetime
                 forecastCD.visibility = Int32(forecastDto.visibility)

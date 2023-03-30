@@ -9,65 +9,36 @@ import Foundation
 import CoreData
 import Factory
 
-/// Mapper to map `CoreData` models to domain models
-struct LocalDtoMapper {
-    @Injected(\.container)
-    private var container: NSPersistentContainer
+/// Mappers of `CoreData` models to domain models
 
-    private var context: NSManagedObjectContext {
-        container.viewContext
-    }
-
-    func coreDataToDto(entity: ForecastCD) -> ForecastDto? {
-        guard let mainCD = fetchMainCD(forecast: entity) else {
+extension ForecastCD {
+    func dto(context: NSManagedObjectContext) -> ForecastDto? {
+        guard let mainCD = fetchMainCD(context: context) else {
             return nil
         }
 
-        guard let weatherCD = fetchWeatherCD(forecast: entity) else {
+        guard let weatherCD = fetchWeatherCD(context: context) else {
             return nil
         }
 
-        guard let windCD = fetchWindCD(forecast: entity) else {
+        guard let windCD = fetchWindCD(context: context) else {
             return nil
         }
-
-        let mainDto = coreDataToDto(entity: mainCD)
-        let weatherDto = coreDataToDto(entity: weatherCD)
-        let windDto = coreDataToDto(entity: windCD)
 
         return ForecastDto(
-            datetime: entity.datetime,
-            main: mainDto,
-            weather: [weatherDto],
-            wind: windDto,
-            visibility: Int(entity.visibility),
-            precipitationProbability: entity.precipitationProbability
+            datetime: self.datetime,
+            main: mainCD.dto,
+            weather: [weatherCD.dto],
+            wind: windCD.dto,
+            visibility: Int(self.visibility),
+            precipitationProbability: self.precipitationProbability
         )
     }
 
-    private func coreDataToDto(entity: ForecastMainCD) -> ForecastMainDto {
-        ForecastMainDto(
-            temperature: entity.temperature,
-            feelsLike: entity.feelsLike,
-            temperatureMin: entity.temperatureMin,
-            temperatureMax: entity.temperatureMax,
-            pressure: Int(entity.pressure),
-            humidity: Int(entity.humidity)
-        )
-    }
-
-    private func coreDataToDto(entity: WeatherCD) -> WeatherDto {
-        WeatherDto(id: 0, description: entity.descriptionString ?? "", icon: entity.icon ?? "")
-    }
-
-    private func coreDataToDto(entity: WindCD) -> WindDto {
-        WindDto(speed: entity.speed, directionDegrees: Int(entity.directionDegrees), gust: entity.gust)
-    }
-
-    private func fetchMainCD(forecast: ForecastCD) -> ForecastMainCD? {
+    private func fetchMainCD(context: NSManagedObjectContext) -> ForecastMainCD? {
         let request = ForecastMainCD.fetchRequest()
 
-        request.predicate = NSPredicate(format: "forecast = %@", forecast)
+        request.predicate = NSPredicate(format: "forecast = %@", self)
 
         do {
             if let mainCD = try context.fetch(request).first {
@@ -80,10 +51,10 @@ struct LocalDtoMapper {
         return nil
     }
 
-    private func fetchWeatherCD(forecast: ForecastCD) -> WeatherCD? {
+    private func fetchWeatherCD(context: NSManagedObjectContext) -> WeatherCD? {
         let request = WeatherCD.fetchRequest()
 
-        request.predicate = NSPredicate(format: "forecast = %@", forecast)
+        request.predicate = NSPredicate(format: "forecast = %@", self)
 
         do {
             if let weatherCD = try context.fetch(request).first {
@@ -96,10 +67,10 @@ struct LocalDtoMapper {
         return nil
     }
 
-    private func fetchWindCD(forecast: ForecastCD) -> WindCD? {
+    private func fetchWindCD(context: NSManagedObjectContext) -> WindCD? {
         let request = WindCD.fetchRequest()
 
-        request.predicate = NSPredicate(format: "forecast = %@", forecast)
+        request.predicate = NSPredicate(format: "forecast = %@", self)
 
         do {
             if let windCD = try context.fetch(request).first {
@@ -111,40 +82,68 @@ struct LocalDtoMapper {
 
         return nil
     }
+}
 
-    func dtoToCoreData(dto: ForecastMainDto, context: NSManagedObjectContext) -> ForecastMainCD {
+extension ForecastMainCD {
+    var dto: ForecastMainDto {
+        ForecastMainDto(
+            temperature: self.temperature,
+            feelsLike: self.feelsLike,
+            temperatureMin: self.temperatureMin,
+            temperatureMax: self.temperatureMax,
+            pressure: Int(self.pressure),
+            humidity: Int(self.humidity)
+        )
+    }
+}
+
+extension WeatherCD {
+    var dto: WeatherDto {
+        WeatherDto(id: 0, description: self.descriptionString ?? "", icon: self.icon ?? "")
+    }
+}
+
+extension WindCD {
+    var dto: WindDto {
+        WindDto(speed: self.speed, directionDegrees: Int(self.directionDegrees), gust: self.gust)
+    }
+}
+
+extension ForecastMainDto {
+    func coreData(context: NSManagedObjectContext) -> ForecastMainCD {
         let mainCD = ForecastMainCD(context: context)
 
         mainCD.id = UUID()
-        mainCD.feelsLike = dto.feelsLike
-        mainCD.humidity = Int32(dto.humidity)
-        mainCD.pressure = Int32(dto.pressure)
-        mainCD.temperature = dto.temperature
-        mainCD.temperatureMax = dto.temperatureMax
-        mainCD.temperatureMin = dto.temperatureMin
+        mainCD.feelsLike = self.feelsLike
+        mainCD.humidity = Int32(self.humidity)
+        mainCD.pressure = Int32(self.pressure)
+        mainCD.temperature = self.temperature
+        mainCD.temperatureMax = self.temperatureMax
+        mainCD.temperatureMin = self.temperatureMin
 
         return mainCD
     }
+}
 
-    func dtoToCoreData(dto: WeatherDto?, context: NSManagedObjectContext) -> WeatherCD? {
-        guard let dto = dto else {
-            return nil
-        }
+extension WeatherDto {
+    func coreData(context: NSManagedObjectContext) -> WeatherCD {
         let weatherCD = WeatherCD(context: context)
 
-        weatherCD.descriptionString = dto.description
-        weatherCD.icon = dto.icon
+        weatherCD.descriptionString = self.description
+        weatherCD.icon = self.icon
 
         return weatherCD
     }
+}
 
-    func dtoToCoreData(dto: WindDto, context: NSManagedObjectContext) -> WindCD {
+extension WindDto {
+    func coreData(context: NSManagedObjectContext) -> WindCD {
         let windCD = WindCD(context: context)
 
         windCD.id = UUID()
-        windCD.speed = dto.speed
-        windCD.directionDegrees = Int32(dto.directionDegrees)
-        windCD.gust = dto.gust
+        windCD.speed = self.speed
+        windCD.directionDegrees = Int32(self.directionDegrees)
+        windCD.gust = self.gust
 
         return windCD
     }

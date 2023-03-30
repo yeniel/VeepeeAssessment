@@ -31,16 +31,6 @@ extension Container {
         Factory(self) { ForecastLocalDataSource() }
     }
 
-    // MARK: Mappers
-
-    var apiDtoMapper: Factory<ApiDtoMapper> {
-        Factory(self) { ApiDtoMapper() }
-    }
-
-    var localDtoMapper: Factory<LocalDtoMapper> {
-        Factory(self) { LocalDtoMapper() }
-    }
-
     // MARK: Use Cases
 
     var getForecastListUseCase: Factory<GetForecastListUseCase> {

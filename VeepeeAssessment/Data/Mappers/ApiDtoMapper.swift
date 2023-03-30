@@ -7,28 +7,28 @@
 
 import Foundation
 
-/// Mapper to map API dtos to domain models
-struct ApiDtoMapper {
-    func dtoToModel(dto: ForecastDto) -> Forecast {
+/// Extension of `ForecastDto`   to map to domain models
+extension ForecastDto {
+    var model: Forecast {
         Forecast(
-            datetime: Date(timeIntervalSince1970: dto.datetime),
-            temperature: dto.main.temperature,
-            feelsLike: dto.main.feelsLike,
-            temperatureMin: dto.main.temperatureMin,
-            temperatureMax: dto.main.temperatureMax,
-            pressure: dto.main.pressure,
-            humidity: dto.main.humidity,
+            datetime: Date(timeIntervalSince1970: self.datetime),
+            temperature: self.main.temperature,
+            feelsLike: self.main.feelsLike,
+            temperatureMin: self.main.temperatureMin,
+            temperatureMax: self.main.temperatureMax,
+            pressure: self.main.pressure,
+            humidity: self.main.humidity,
             weather: Weather(
-                description: dto.weather.first?.description ?? "",
-                icon: dto.weather.first?.icon ?? ""
+                description: self.weather.first?.description ?? "",
+                icon: self.weather.first?.icon ?? ""
             ),
             wind: Wind(
-                speed: dto.wind.speed,
-                directionDegrees: dto.wind.directionDegrees,
-                gust: dto.wind.gust
+                speed: self.wind.speed,
+                directionDegrees: self.wind.directionDegrees,
+                gust: self.wind.gust
             ),
-            visibility: dto.visibility,
-            precipitationProbability: dto.precipitationProbability
+            visibility: self.visibility,
+            precipitationProbability: self.precipitationProbability
         )
     }
 }
