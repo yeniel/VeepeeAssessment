@@ -24,7 +24,7 @@ final class MockApiClient<T>: ApiClient {
     }
 }
 
-final class MockMainCoordinator: MainCoordinatorProtocol {
+final class MockMainCoordinator: MainCoordinator {
     var routedToDetail = false
 
     func routeToDetail(forecastDatetime: Date) {

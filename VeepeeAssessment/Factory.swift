@@ -64,4 +64,8 @@ extension Container {
     var dateUtils: Factory<DateUtils> {
         Factory(self) { DateUtils(timeZoneProvider: CurrentTimeZoneProvider()) }
     }
+
+    var mainCoordinator: Factory<MainCoordinatorImpl> {
+        Factory(self) { MainCoordinatorImpl() }.singleton
+    }
 }

@@ -11,8 +11,6 @@ import Nimble
 import Quick
 import Stinsen
 
-// swiftlint:disable function_body_length
-
 class HomeViewModelSpec: QuickSpec {
     override func spec() {
         var mockCoordinator: MockMainCoordinator!
@@ -29,28 +27,18 @@ class HomeViewModelSpec: QuickSpec {
         describe("GIVEN a HomeViewModel with successfully forecast list use case") {
             context("WHEN get forecast list") {
                 it("THEN publishs forecast list") { @MainActor in
-                    let viewModel = HomeViewModel(coordinator: mockCoordinator)
+                    let viewModel = HomeViewModel()
 
                     await viewModel.getForecastList()
 
                     await expect(viewModel.forecastList).toEventually(equal(ObjectMother.forecastListUI))
                 }
                 it("THEN publishs loaded status") {
-                    let viewModel = HomeViewModel(coordinator: mockCoordinator)
+                    let viewModel = HomeViewModel()
 
                     await viewModel.getForecastList()
 
                     await expect(viewModel.status).toEventually(equal(.loaded))
-                }
-            }
-
-            context("WHEN click on a forecast row") {
-                it("THEN routes to detail view") {
-                    let viewModel = HomeViewModel(coordinator: mockCoordinator)
-
-                    viewModel.routeToDetail(forecastDatetime: Date(timeIntervalSince1970: 1679508000))
-
-                    await expect(mockCoordinator.routedToDetail).toEventually(beTrue())
                 }
             }
         }
@@ -60,7 +48,7 @@ class HomeViewModelSpec: QuickSpec {
                 it("THEN publishs an empty forecast list") {
                     setupMocks(error: .networkError)
 
-                    let viewModel = HomeViewModel(coordinator: mockCoordinator)
+                    let viewModel = HomeViewModel()
 
                     await viewModel.getForecastList()
 
@@ -70,7 +58,7 @@ class HomeViewModelSpec: QuickSpec {
                 it("THEN publishs failed status with message 'Error: Try again later'") {
                     setupMocks(error: .networkError)
 
-                    let viewModel = HomeViewModel(coordinator: mockCoordinator)
+                    let viewModel = HomeViewModel()
 
                     await viewModel.getForecastList()
 
@@ -86,7 +74,7 @@ class HomeViewModelSpec: QuickSpec {
 
             let mockNavigationRouter = NavigationRouter(
                 id: 0,
-                coordinator: mockCoordinator as MainCoordinatorProtocol
+                coordinator: mockCoordinator as MainCoordinator
             )
 
             RouterStore.shared.store(router: mockNavigationRouter)
@@ -97,5 +85,3 @@ class HomeViewModelSpec: QuickSpec {
         }
     }
 }
-
-// swiftlint:enable function_body_length

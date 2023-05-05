@@ -22,12 +22,6 @@ class HomeViewModel: ObservableObject {
     @Injected(\.dateUtils)
     private var dateUtils
 
-    private let coordinator: MainCoordinatorProtocol
-
-    init(coordinator: MainCoordinatorProtocol) {
-        self.coordinator = coordinator
-    }
-
     @MainActor
     func getForecastList() async {
         let result = await getForecastListUseCase.execute(
@@ -44,10 +38,6 @@ class HomeViewModel: ObservableObject {
             self.forecastList = []
             self.status = .failed("Error: Try again later")
         }
-    }
-
-    func routeToDetail(forecastDatetime: Date) {
-        coordinator.routeToDetail(forecastDatetime: forecastDatetime)
     }
 
     private func domainModelToUIModel(domainModel: Forecast) -> ForecastUI {

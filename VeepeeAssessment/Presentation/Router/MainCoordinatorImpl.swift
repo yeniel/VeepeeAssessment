@@ -1,5 +1,5 @@
 //
-//  MainCoordinator.swift
+//  MainCoordinatorImpl.swift
 //  VeepeeAssessment
 //
 //  Created by Yeniel Landestoy on 17/3/23.
@@ -9,12 +9,8 @@ import Foundation
 import Stinsen
 import SwiftUI
 
-protocol MainCoordinatorProtocol {
-    func routeToDetail(forecastDatetime: Date)
-}
-
-final class MainCoordinator: MainCoordinatorProtocol, NavigationCoordinatable {
-    let stack = NavigationStack(initial: \MainCoordinator.start)
+final class MainCoordinatorImpl: MainCoordinator, NavigationCoordinatable {
+    let stack = NavigationStack(initial: \MainCoordinatorImpl.start)
 
     lazy var routerStorable: MainCoordinator = self
 
@@ -26,9 +22,9 @@ final class MainCoordinator: MainCoordinatorProtocol, NavigationCoordinatable {
 
     @ViewBuilder
     func makeStart() -> some View {
-        let viewModel = HomeViewModel(coordinator: self)
+        let viewModel = HomeViewModel()
 
-        HomeView(viewModel: viewModel)
+        HomeView(viewModel: viewModel, mainCoordinator: self)
     }
 
     @ViewBuilder

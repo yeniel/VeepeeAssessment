@@ -75,7 +75,7 @@ class DetailViewModelSpec: QuickSpec {
 
             let mockNavigationRouter = NavigationRouter(
                 id: 0,
-                coordinator: mockCoordinator as MainCoordinatorProtocol
+                coordinator: mockCoordinator as MainCoordinator
             )
 
             RouterStore.shared.store(router: mockNavigationRouter)

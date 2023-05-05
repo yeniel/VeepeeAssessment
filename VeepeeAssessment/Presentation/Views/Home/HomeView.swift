@@ -14,8 +14,11 @@ struct HomeView: View {
     @ObservedObject
     var viewModel: HomeViewModel
 
-    init(viewModel: HomeViewModel) {
+    private let mainCoordinator: MainCoordinator
+
+    init(viewModel: HomeViewModel, mainCoordinator: MainCoordinator) {
         self.viewModel = viewModel
+        self.mainCoordinator = mainCoordinator
     }
 
     var body: some View {
@@ -53,7 +56,7 @@ struct HomeView: View {
                     }
                     .contentShape(Rectangle())
                     .onTapGesture {
-                        viewModel.routeToDetail(forecastDatetime: forecast.id)
+                        mainCoordinator.routeToDetail(forecastDatetime: forecast.id)
                     }
                 }
             }
