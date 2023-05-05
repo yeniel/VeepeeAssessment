@@ -30,8 +30,8 @@ class HomeViewSnapshotSuccessSpec: QuickSpec {
                 it("THEN snapshot should match") { @MainActor in
                     setupMocks()
 
-                    let viewModel = HomeViewModel(coordinator: mockCoordinator)
-                    let view = HomeView(viewModel: viewModel)
+                    let viewModel = HomeViewModel()
+                    let view = HomeView(viewModel: viewModel, mainCoordinator: mockCoordinator)
 
                     await viewModel.getForecastList()
 
